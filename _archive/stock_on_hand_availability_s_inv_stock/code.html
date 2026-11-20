@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#00142a", "secondary-container": "#0a9ccd", "secondary-fixed-dim": "#76d1ff", "primary": "#94ccff", "on-primary-fixed-variant": "#004b74", "surface-container-lowest": "#000f21", "tertiary-container": "#7b94cb", "on-primary": "#003352", "surface": "#00142a", "on-primary-fixed": "#001d32", "background": "#00142a", "surface-container": "#0a2038", "on-tertiary-fixed": "#001a42", "surface-bright": "#273a53", "on-tertiary-container": "#0d2b5c", "on-primary-container": "#002f4c", "on-secondary-fixed": "#001e2b", "inverse-surface": "#d2e4ff", "on-secondary": "#003548", "primary-container": "#1e9be8", "primary-fixed-dim": "#94ccff", "inverse-on-surface": "#1d3149", "tertiary-fixed": "#d8e2ff", "on-error": "#690005", "on-secondary-container": "#002e3f", "secondary": "#76d1ff", "inverse-primary": "#006399", "outline": "#89929c", "on-surface": "#d2e4ff", "surface-tint": "#94ccff", "on-tertiary-fixed-variant": "#2c4678", "on-background": "#d2e4ff", "surface-container-low": "#061c33", "error": "#ffb4ab", "error-container": "#93000a", "on-tertiary": "#122f60", "tertiary": "#aec6ff", "tertiary-fixed-dim": "#aec6ff", "secondary-fixed": "#c2e8ff", "surface-variant": "#22364e", "on-surface-variant": "#bfc7d3", "on-secondary-fixed-variant": "#004d67", "surface-container-highest": "#22364e", "surface-container-high": "#162b43", "on-error-container": "#ffdad6", "primary-fixed": "#cde5ff", "outline-variant": "#3f4851" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-md": "1rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "2rem", "space-xl": "2rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "numeric-metric": ["Inter"], "label-md": ["Inter"], "title-md": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "numeric-metric": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary-fixed"><aside class="fixed left-0 top-0 h-full w-[264px] bg-[#00142a]/95 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)]"><div class="flex flex-col h-full overflow-hidden"><div class="h-[72px] px-space-lg flex items-center justify-between border-b border-white/10"><div class="flex items-center gap-space-sm"><img alt="Wise Distribution Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDryduxKmod-XeUaCCLPODn7x8Bb9-rsbknpIVVZvb6dl9I5SvGzz3nR48zD_r9ZwpWSS8nt_iRQAS9U9HhA1cXCJ-ZF8ERMnEWvF_A7sN-9_UUXuEU4Oaof5cONDiIdMAD7OTdpW1HfTLzRvxm2YwVGoF3aZw7yzkGYBlLbK2rBweBz7v4phCZ6vU3nm_LoPBKPbJwEKXrLuDMXKpS3Jn8asUt_l9QeFJhtSYe0emy"/><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">Wise ERP</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Distribution Egypt</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg transition-colors"><span class="material-symbols-outlined text-[18px]">dock_to_left</span></button></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-xs" data-active-classes="bg-gradient-to-r from-secondary/20 to-primary-container/10 text-secondary border-l-2 border-secondary font-semibold shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]"><div class="flex items-center justify-between px-space-sm pt-2 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Operations / Inventory</span><span class="px-1.5 py-0.5 rounded-full font-label-sm text-[10px] bg-secondary-container/20 text-secondary border border-secondary/30">Hub</span></div><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="inventory-dashboard-s-dash-inv" href="#">Inventory Dashboard (S-DASH-INV)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stock-on-hand-&amp;-availability-s-inv-stock" href="#">Stock on Hand &amp; Availability (S-INV-STOCK)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="goods-receipts-&amp;-grn-s-inv-receipt" href="#">Goods Receipts &amp; GRN (S-INV-RECEIPT)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="inter-warehouse-transfers-s-inv-transfer" href="#">Inter-Warehouse Transfers (S-INV-TRANSFER)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="warehouses-&amp;-locations-s-inv-warehouses" href="#">Warehouses &amp; Locations (S-INV-WAREHOUSES)</a><div class="px-space-sm pt-4 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Finance &amp; Accounts</div><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="chart-of-accounts-s-acc-coa" href="#">Chart of Accounts (S-ACC-COA)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="journal-entries-s-acc-journal" href="#">Journal Entries (S-ACC-JOURNAL)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="treasury-&amp;-cheques-s-acc-treasury" href="#">Treasury &amp; Cheques (S-ACC-TREASURY)</a></nav></div><div class="p-space-md border-t border-white/10 bg-surface-container-low/70 backdrop-blur-md flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-secondary">hub</span>Cairo Central Hub</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm text-secondary-fixed">Live Stock Sync: Active</span><span class="material-symbols-outlined text-[16px] text-outline hover:text-on-surface cursor-pointer">unfold_more</span></div></div></div></aside><div class="pl-[264px]"><header class="fixed top-0 left-[264px] right-0 h-[72px] z-40 bg-[#00142a]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-secondary">home</span><span>/</span><span class="text-outline hover:text-on-surface cursor-pointer">Operations</span><span>/</span><span class="text-on-surface font-semibold">Inventory</span></div><div class="flex-1 max-w-xl mx-space-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-12 py-2 bg-[#04122b]/80 border border-white/15 rounded-lg text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/40 transition-all" placeholder="Search SKU, lots, transfers, GRN, warehouses (⌘K)..." type="text"/><span class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container-high border border-white/10 font-label-sm text-label-sm text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="relative"><select class="appearance-none bg-surface-container-high/60 border border-white/15 text-on-surface font-body-sm text-body-sm rounded-lg pl-3 pr-8 py-1.5 hover:bg-surface-container-highest cursor-pointer focus:outline-none focus:border-secondary"><option>Cairo HQ &amp; Central Hub</option><option>Alexandria Coastal Hub</option><option>Giza Fulfillment</option><option>Delta Mansoura</option></select><span class="material-symbols-outlined absolute right-2 top-2 pointer-events-none text-outline text-[18px]">expand_more</span></div><div class="flex items-center border border-white/15 rounded-lg p-0.5 bg-surface-container-high/40"><button class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-container">EN</button><button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">ع</button></div><button class="p-1.5 rounded-lg border border-white/15 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><div class="relative"><button class="p-2 rounded-lg border border-white/15 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full font-label-sm text-[10px] bg-secondary text-on-secondary font-bold shadow-[0_0_10px_rgba(118,209,255,0.6)]">5</span></div><div class="h-6 w-px bg-white/15 mx-1"></div><div class="flex items-center gap-3 pl-1"><div class="flex flex-col text-right"><div class="flex items-center gap-1.5 justify-end"><span class="font-title-md text-title-md font-semibold text-on-surface">Tarek El-Sayed</span><span class="px-1.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-primary-container/20 text-secondary border border-secondary/30">Super Admin</span></div><span class="font-label-sm text-label-sm text-outline">Inventory Controller • Scope: All</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-secondary/40 shadow-[0_0_12px_rgba(91,203,255,0.2)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCultRCtgMRciVnK51-F0eUsLbvHS18gsIaQOxtHuKNKgGK7VdoAcDl4WgDbSh4XJ91VDiO50qXeDlh2vOYWYtqIlueYzfKqwUrqKJTHj0hymeNiiU-85wfsCNq8hfjNvNmvg1bEXYoxNnei7URQsxx59IdhDLKU2LngBC4FB7aOhLbBQMr216iGCzBul8s67Wl_IOkppRPIUtFFNEIsNY2a6XrqPz5ia7nCatKUCw"/></div></div></header><main class="relative pt-[72px] min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Orbs -->
+<div class="relative w-full overflow-hidden px-space-lg py-space-md space-y-space-md">
+<div class="pointer-events-none absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-primary-container/15 blur-[120px]"></div>
+<div class="pointer-events-none absolute top-72 right-12 h-96 w-96 rounded-full bg-secondary/10 blur-[130px]"></div>
+<!-- Header Actions & Context Ribbon -->
+<div class="relative z-10 flex flex-col gap-space-md lg:flex-row lg:items-center lg:justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 rounded-full bg-surface-container-high/80 px-2.5 py-0.5 font-label-sm text-label-sm text-secondary">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span>
+            S-INV-STOCK • LIVE MATRIX
+          </span>
+<span class="font-label-sm text-label-sm text-outline">EGYPT DC NETWORK</span>
+</div>
+<div class="flex flex-wrap items-baseline gap-3">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Stock on Hand &amp; Availability</h1>
+<span class="font-headline-md text-headline-md text-secondary-fixed/90" dir="rtl">مخزون المستودعات والتوافر</span>
+</div>
+<p class="max-w-3xl font-body-sm text-body-sm text-on-surface-variant">
+          Real-time multi-warehouse inventory matrix, reservation tracking, and batch/expiry telemetry across Egyptian distribution hubs (Cairo Badr, 6th October, Alexandria, Delta).
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="inline-flex items-center gap-2 rounded-lg bg-surface-container-high/80 hover:bg-surface-container-highest px-3.5 py-2 font-label-md text-label-md text-on-surface transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+<span>Stock Valuation Matrix</span>
+</button>
+<button class="inline-flex items-center gap-2 rounded-lg bg-surface-container-high/80 hover:bg-surface-container-highest px-3.5 py-2 font-label-md text-label-md text-on-surface transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Export (XLS/PDF)</span>
+</button>
+<button class="inline-flex items-center gap-2 rounded-lg bg-surface-container-high/80 hover:bg-surface-container-highest px-3.5 py-2 font-label-md text-label-md text-on-surface transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">inventory</span>
+<span>Bulk Recount Order</span>
+</button>
+<button class="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-secondary to-primary-container hover:from-secondary-fixed-dim hover:to-primary text-on-primary-fixed font-title-md text-title-md px-4 py-2 font-semibold shadow-lg shadow-primary-container/20 transition-all hover:scale-[1.01] active:scale-[0.99]">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Manual Adjustment</span>
+</button>
+</div>
+</div>
+<!-- 4 KPI Telematics Blocks -->
+<div class="relative z-10 grid grid-cols-1 gap-space-md sm:grid-cols-2 xl:grid-cols-4">
+<!-- KPI 1 -->
+<div class="group relative overflow-hidden rounded-2xl bg-surface-container-low/75 p-space-md shadow-xl backdrop-blur-xl transition-all hover:bg-surface-container/80">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Total Inventory Valuation</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-numeric-metric text-numeric-metric text-on-surface">41,630,150</span>
+<span class="font-label-md text-label-md text-secondary">EGP</span>
+</div>
+</div>
+<span class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-container/20 text-secondary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</span>
+</div>
+<div class="mt-3 flex items-center justify-between font-body-sm text-body-sm">
+<span class="inline-flex items-center gap-1 rounded-full bg-surface-container-highest px-2 py-0.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +4.8% MTD
+          </span>
+<span class="text-outline">6 Hubs • 1,420 Active SKUs</span>
+</div>
+<div class="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-surface-container-highest">
+<div class="h-full w-4/5 rounded-full bg-gradient-to-r from-primary-container to-secondary"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="group relative overflow-hidden rounded-2xl bg-surface-container-low/75 p-space-md shadow-xl backdrop-blur-xl transition-all hover:bg-surface-container/80">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Available for Sale (Physical)</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-numeric-metric text-numeric-metric text-on-surface">842,500</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Units</span>
+</div>
+</div>
+<span class="flex h-9 w-9 items-center justify-center rounded-xl bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</span>
+</div>
+<div class="mt-3 flex items-center justify-between font-body-sm text-body-sm">
+<span class="inline-flex items-center gap-1 rounded-full bg-surface-container-highest px-2 py-0.5 text-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 91.4% Fill Rate
+          </span>
+<span class="text-outline">48,200 Reserved</span>
+</div>
+<div class="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-surface-container-highest">
+<div class="h-full w-[91.4%] rounded-full bg-secondary"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="group relative overflow-hidden rounded-2xl bg-surface-container-low/75 p-space-md shadow-xl backdrop-blur-xl transition-all hover:bg-surface-container/80">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Below Reorder Point</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-numeric-metric text-numeric-metric text-error">18</span>
+<span class="font-label-md text-label-md text-error/80">SKUs Alert</span>
+</div>
+</div>
+<span class="flex h-9 w-9 items-center justify-center rounded-xl bg-error-container/20 text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</span>
+</div>
+<div class="mt-3 flex items-center justify-between font-body-sm text-body-sm">
+<span class="inline-flex items-center gap-1 rounded-full bg-error-container/30 px-2 py-0.5 text-error">
+            6 Critical Stockout
+          </span>
+<span class="text-outline">Auto-PO Drafted (Cairo)</span>
+</div>
+<div class="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-surface-container-highest">
+<div class="h-full w-[35%] rounded-full bg-error"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="group relative overflow-hidden rounded-2xl bg-surface-container-low/75 p-space-md shadow-xl backdrop-blur-xl transition-all hover:bg-surface-container/80">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Expiring ≤ 45 Days</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-numeric-metric text-numeric-metric text-tertiary">1,840,200</span>
+<span class="font-label-md text-label-md text-tertiary">EGP</span>
+</div>
+</div>
+<span class="flex h-9 w-9 items-center justify-center rounded-xl bg-tertiary-container/20 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</span>
+</div>
+<div class="mt-3 flex items-center justify-between font-body-sm text-body-sm">
+<span class="inline-flex items-center gap-1 rounded-full bg-tertiary-container/30 px-2 py-0.5 text-tertiary">
+            42 Batches Flagged
+          </span>
+<span class="text-outline">Promo Protocol ON</span>
+</div>
+<div class="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-surface-container-highest">
+<div class="h-full w-1/2 rounded-full bg-tertiary"></div>
+</div>
+</div>
+</div>
+<!-- Filter & Command Bar -->
+<div class="relative z-10 flex flex-col gap-space-sm rounded-2xl bg-surface-container-low/85 p-space-md shadow-xl backdrop-blur-xl">
+<div class="flex flex-col gap-3 lg:flex-row lg:items-center">
+<!-- Search -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-outline">search</span>
+<input class="w-full rounded-xl bg-surface-container-lowest/80 pl-10 pr-4 py-2 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary/50" placeholder="Filter by SKU, barcode, product name (EN/AR), batch #, or lot..." type="text" value="Crystal Sunflower Oil"/>
+</div>
+<!-- Warehouse Hub Select -->
+<div class="relative min-w-[240px]">
+<select class="w-full appearance-none rounded-xl bg-surface-container-lowest/80 px-3.5 py-2 pr-9 font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary/50 cursor-pointer">
+<option>All Warehouses &amp; Transit Hubs</option>
+<option selected="">Central Badr DC (Hub 01 - Cairo)</option>
+<option>6th of October Depot (Giza)</option>
+<option>Alexandria Regional DC (Coastal)</option>
+<option>Tanta Transit Hub (Delta)</option>
+<option>Mansoura Feeder Depot</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-2.5 text-[18px] text-outline">expand_more</span>
+</div>
+<!-- Category Select -->
+<div class="relative min-w-[210px]">
+<select class="w-full appearance-none rounded-xl bg-surface-container-lowest/80 px-3.5 py-2 pr-9 font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary/50 cursor-pointer">
+<option>All Product Categories</option>
+<option selected="">Edible Oils &amp; Cooking Fats</option>
+<option>Dairy &amp; Chilled Products</option>
+<option>Packaged Foods &amp; Grains</option>
+<option>Beverages &amp; Juices</option>
+<option>Home &amp; Personal Care</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-2.5 text-[18px] text-outline">expand_more</span>
+</div>
+<!-- UOM Segmented Control -->
+<div class="flex items-center rounded-xl bg-surface-container-lowest/90 p-1 text-on-surface-variant font-label-sm text-label-sm">
+<button class="rounded-lg bg-secondary-container/40 px-3 py-1 font-semibold text-secondary">Base (Pcs/Btl)</button>
+<button class="rounded-lg px-3 py-1 hover:text-on-surface transition-colors">Cartons</button>
+<button class="rounded-lg px-3 py-1 hover:text-on-surface transition-colors">Pallets</button>
+</div>
+</div>
+<!-- Quick Filter Pills Ribbon -->
+<div class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-white/5">
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="rounded-full bg-surface-container-high px-3 py-1 font-label-sm text-label-sm text-secondary font-medium hover:bg-surface-container-highest transition-colors">
+            All SKUs <span class="ml-1 text-outline">1,420</span>
+</button>
+<button class="rounded-full bg-surface-container px-3 py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">
+            In Stock <span class="ml-1 text-outline">1,290</span>
+</button>
+<button class="rounded-full bg-error-container/20 text-error px-3 py-1 font-label-sm text-label-sm font-medium hover:bg-error-container/30 transition-colors">
+            Low Stock <span class="ml-1">18</span>
+</button>
+<button class="rounded-full bg-surface-container px-3 py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors">
+            Out of Stock <span class="ml-1 text-outline">4</span>
+</button>
+<button class="rounded-full bg-tertiary-container/20 text-tertiary px-3 py-1 font-label-sm text-label-sm hover:bg-tertiary-container/30 transition-colors">
+            Quarantined / Expiring <span class="ml-1">24</span>
+</button>
+<button class="rounded-full bg-primary-container/20 text-primary px-3 py-1 font-label-sm text-label-sm hover:bg-primary-container/30 transition-colors">
+            In-Transit <span class="ml-1">84</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-outline font-body-sm text-body-sm">
+<span>Sort by:</span>
+<span class="text-secondary font-medium cursor-pointer flex items-center gap-0.5">
+            Valuation (High to Low)
+            <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Main Workspace Split Layout: 70% Table, 30% Right Details Drawer -->
+<div class="relative z-10 grid grid-cols-1 gap-space-md lg:grid-cols-12 items-start">
+<!-- High Density Inventory Matrix Table (70% - 8.5 Cols) -->
+<div class="lg:col-span-8 flex flex-col rounded-2xl bg-surface-container-low/75 shadow-xl backdrop-blur-xl overflow-hidden">
+<!-- Table Toolbar -->
+<div class="flex items-center justify-between px-space-md py-3 bg-surface-container/60">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Hub Inventory Matrix</span>
+<span class="rounded bg-secondary/15 px-2 py-0.5 font-label-sm text-label-sm text-secondary">Showing 6 of 1,420 Items</span>
+</div>
+<div class="flex items-center gap-3">
+<label class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm cursor-pointer">
+<input checked="" class="h-4 w-4 rounded bg-surface-container-highest accent-secondary cursor-pointer" type="checkbox"/>
+<span>Compact View</span>
+</label>
+<button class="p-1 rounded text-outline hover:text-on-surface transition-colors" title="Reload live data">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-highest/40 font-label-sm text-label-sm uppercase tracking-wider text-outline select-none">
+<th class="py-3 px-space-md">Product / SKU Details</th>
+<th class="py-3 px-3">Hub &amp; Bin</th>
+<th class="py-3 px-3 text-right">On Hand</th>
+<th class="py-3 px-3 text-right">Reserved</th>
+<th class="py-3 px-3 text-right text-secondary">Available</th>
+<th class="py-3 px-3 text-right">In Transit</th>
+<th class="py-3 px-3">Stock Level</th>
+<th class="py-3 px-3 text-right">Valuation (EGP)</th>
+<th class="py-3 px-3">Status</th>
+<th class="py-3 px-space-md text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<!-- Row 1 (ACTIVE / SELECTED: Crystal Sunflower Oil) -->
+<tr class="bg-primary-container/10 hover:bg-primary-container/15 transition-colors cursor-pointer group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<div class="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">oil_barrel</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-semibold text-on-surface truncate">Crystal Pure Sunflower Oil 1L</span>
+<span class="rounded bg-secondary-container/20 px-1.5 py-0.2 font-label-sm text-[10px] text-secondary">Active Focus</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="text-secondary-fixed/90 font-medium" dir="rtl">زيت عباد الشمس كريستال</span>
+<span>•</span>
+<span>SKU-OIL-1044</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-body-sm font-medium text-on-surface">Central Badr DC</div>
+<div class="font-label-sm text-label-sm text-secondary">Aisle B-04-R2</div>
+</td>
+<td class="py-3 px-3 text-right font-medium text-on-surface whitespace-nowrap">
+                  20,450 <span class="font-label-sm text-outline">Btl</span>
+</td>
+<td class="py-3 px-3 text-right text-outline whitespace-nowrap">
+                  2,800 <span class="font-label-sm">Btl</span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<span class="inline-flex rounded-lg bg-secondary/15 px-2 py-0.5 font-semibold text-secondary">
+                    17,650 Btl
+                  </span>
+</td>
+<td class="py-3 px-3 text-right text-primary whitespace-nowrap">
+                  +4,800
+                </td>
+<td class="py-3 px-3 whitespace-nowrap min-w-[100px]">
+<div class="flex items-center gap-2">
+<div class="h-2 w-16 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 82%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">82%</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right font-numeric-metric text-on-surface whitespace-nowrap">
+                  1,840,500
+                </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 font-label-sm text-label-sm font-medium text-emerald-400">
+<span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Optimal
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<button class="p-1 rounded hover:bg-surface-container-highest text-secondary transition-colors" title="View Batch Matrix">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 (Juhayna Full Cream Milk) -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<div class="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">local_cafe</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-medium text-on-surface truncate">Juhayna Full Cream Milk 1L</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="text-secondary-fixed/90 font-medium" dir="rtl">حليب جهينة كامل الدسم</span>
+<span>•</span>
+<span>SKU-BEV-9921</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-body-sm font-medium text-on-surface">6th October Depot</div>
+<div class="font-label-sm text-label-sm text-secondary">Chilled Zone C1</div>
+</td>
+<td class="py-3 px-3 text-right font-medium text-on-surface whitespace-nowrap">
+                  34,200 <span class="font-label-sm text-outline">Pcs</span>
+</td>
+<td class="py-3 px-3 text-right text-outline whitespace-nowrap">
+                  5,600 <span class="font-label-sm">Pcs</span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<span class="inline-flex rounded-lg bg-secondary/10 px-2 py-0.5 font-semibold text-secondary">
+                    28,600 Pcs
+                  </span>
+</td>
+<td class="py-3 px-3 text-right text-primary whitespace-nowrap">
+                  +12,000
+                </td>
+<td class="py-3 px-3 whitespace-nowrap min-w-[100px]">
+<div class="flex items-center gap-2">
+<div class="h-2 w-16 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 74%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">74%</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right font-numeric-metric text-on-surface whitespace-nowrap">
+                  1,436,400
+                </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 font-label-sm text-label-sm font-medium text-emerald-400">
+<span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Optimal
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<button class="p-1 rounded hover:bg-surface-container-highest text-outline group-hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 (Americana Fava Beans - LOW STOCK ALERT) -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group bg-error-container/5">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<div class="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-highest flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[22px]">egg_alt</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-medium text-on-surface truncate">Americana Plain Fava Beans 400g</span>
+<span class="rounded bg-error-container/30 px-1.5 py-0.2 font-label-sm text-[10px] text-error font-semibold">Low Reorder</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="text-secondary-fixed/90 font-medium" dir="rtl">فول مدمس أمريكانا سادة</span>
+<span>•</span>
+<span>SKU-CAN-3108</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-body-sm font-medium text-on-surface">Alex Regional DC</div>
+<div class="font-label-sm text-label-sm text-secondary">Aisle D-01-A</div>
+</td>
+<td class="py-3 px-3 text-right font-medium text-error whitespace-nowrap">
+                  1,850 <span class="font-label-sm text-outline">Cans</span>
+</td>
+<td class="py-3 px-3 text-right text-outline whitespace-nowrap">
+                  1,200 <span class="font-label-sm">Cans</span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<span class="inline-flex rounded-lg bg-error-container/30 px-2 py-0.5 font-bold text-error">
+                    650 Cans
+                  </span>
+</td>
+<td class="py-3 px-3 text-right text-primary whitespace-nowrap">
+                  +5,000
+                </td>
+<td class="py-3 px-3 whitespace-nowrap min-w-[100px]">
+<div class="flex items-center gap-2">
+<div class="h-2 w-16 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 18%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-error font-bold">18%</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right font-numeric-metric text-on-surface whitespace-nowrap">
+                  48,100
+                </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 rounded-full bg-amber-500/15 px-2 py-0.5 font-label-sm text-label-sm font-semibold text-amber-300">
+<span class="h-1.5 w-1.5 rounded-full bg-amber-400"></span> Reorder Min
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<button class="p-1 rounded hover:bg-surface-container-highest text-outline group-hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 (Corona Cocoa Powder - QUARANTINE / EXPIRY ALERT) -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group bg-tertiary-container/5">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<div class="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">cookie</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-medium text-on-surface truncate">Corona Pure Cocoa Powder 250g</span>
+<span class="rounded bg-tertiary-container/30 px-1.5 py-0.2 font-label-sm text-[10px] text-tertiary">Exp &lt; 35d</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="text-secondary-fixed/90 font-medium" dir="rtl">كاكاو كورونا الأصلي</span>
+<span>•</span>
+<span>SKU-DRY-5519</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-body-sm font-medium text-on-surface">Central Badr DC</div>
+<div class="font-label-sm text-label-sm text-secondary">Sec G-Lot 08</div>
+</td>
+<td class="py-3 px-3 text-right font-medium text-on-surface whitespace-nowrap">
+                  6,400 <span class="font-label-sm text-outline">Pcs</span>
+</td>
+<td class="py-3 px-3 text-right text-outline whitespace-nowrap">
+                  400 <span class="font-label-sm">Pcs</span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<span class="inline-flex rounded-lg bg-surface-container-highest px-2 py-0.5 font-semibold text-tertiary">
+                    6,000 Pcs
+                  </span>
+</td>
+<td class="py-3 px-3 text-right text-outline whitespace-nowrap">
+                  —
+                </td>
+<td class="py-3 px-3 whitespace-nowrap min-w-[100px]">
+<div class="flex items-center gap-2">
+<div class="h-2 w-16 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 60%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">60%</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right font-numeric-metric text-on-surface whitespace-nowrap">
+                  576,000
+                </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 rounded-full bg-tertiary-container/30 px-2 py-0.5 font-label-sm text-label-sm font-medium text-tertiary">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span> Near Expiry
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<button class="p-1 rounded hover:bg-surface-container-highest text-outline group-hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 (Savola Rawabi Vegetable Ghee 1.5kg) -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<div class="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">soup_kitchen</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-medium text-on-surface truncate">Savola Rawabi Ghee 1.5kg</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="text-secondary-fixed/90 font-medium" dir="rtl">سمن روابي نباتي صافي</span>
+<span>•</span>
+<span>SKU-OIL-8820</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-body-sm font-medium text-on-surface">Tanta Transit Hub</div>
+<div class="font-label-sm text-label-sm text-secondary">Zone F-02</div>
+</td>
+<td class="py-3 px-3 text-right font-medium text-on-surface whitespace-nowrap">
+                  8,900 <span class="font-label-sm text-outline">Tins</span>
+</td>
+<td class="py-3 px-3 text-right text-outline whitespace-nowrap">
+                  1,100 <span class="font-label-sm">Tins</span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<span class="inline-flex rounded-lg bg-secondary/10 px-2 py-0.5 font-semibold text-secondary">
+                    7,800 Tins
+                  </span>
+</td>
+<td class="py-3 px-3 text-right text-primary whitespace-nowrap">
+                  +2,400
+                </td>
+<td class="py-3 px-3 whitespace-nowrap min-w-[100px]">
+<div class="flex items-center gap-2">
+<div class="h-2 w-16 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 88%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">88%</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right font-numeric-metric text-on-surface whitespace-nowrap">
+                  1,246,000
+                </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 font-label-sm text-label-sm font-medium text-emerald-400">
+<span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Optimal
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<button class="p-1 rounded hover:bg-surface-container-highest text-outline group-hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 (Al-Doha Egyptian White Rice 5kg) -->
+<tr class="hover:bg-surface-container/60 transition-colors cursor-pointer group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<div class="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">grain</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-medium text-on-surface truncate">Al-Doha Egyptian White Rice 5kg</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="text-secondary-fixed/90 font-medium" dir="rtl">أرز مصري الضحى فاخر</span>
+<span>•</span>
+<span>SKU-GRN-1102</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-body-sm font-medium text-on-surface">Mansoura Feeder</div>
+<div class="font-label-sm text-label-sm text-secondary">Pallet Bay 14</div>
+</td>
+<td class="py-3 px-3 text-right font-medium text-on-surface whitespace-nowrap">
+                  12,100 <span class="font-label-sm text-outline">Bags</span>
+</td>
+<td class="py-3 px-3 text-right text-outline whitespace-nowrap">
+                  3,400 <span class="font-label-sm">Bags</span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<span class="inline-flex rounded-lg bg-secondary/10 px-2 py-0.5 font-semibold text-secondary">
+                    8,700 Bags
+                  </span>
+</td>
+<td class="py-3 px-3 text-right text-outline whitespace-nowrap">
+                  —
+                </td>
+<td class="py-3 px-3 whitespace-nowrap min-w-[100px]">
+<div class="flex items-center gap-2">
+<div class="h-2 w-16 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 68%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">68%</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right font-numeric-metric text-on-surface whitespace-nowrap">
+                  2,299,000
+                </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 font-label-sm text-label-sm font-medium text-emerald-400">
+<span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Optimal
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center whitespace-nowrap">
+<button class="p-1 rounded hover:bg-surface-container-highest text-outline group-hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="flex flex-col sm:flex-row items-center justify-between px-space-md py-3 bg-surface-container/40 gap-3 border-t border-white/5">
+<div class="font-label-sm text-label-sm text-outline">
+            Showing <span class="text-on-surface font-semibold">1 to 6</span> of <span class="text-on-surface font-semibold">1,420</span> SKUs
+          </div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<button class="px-2 py-1 rounded bg-surface-container text-outline hover:text-on-surface disabled:opacity-30" disabled="">Previous</button>
+<button class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-semibold">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-outline hover:text-on-surface">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-outline hover:text-on-surface">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-outline hover:text-on-surface">237</button>
+<button class="px-2 py-1 rounded bg-surface-container text-outline hover:text-on-surface">Next</button>
+</div>
+</div>
+</div>
+<!-- Right Interactive Batch & Expiry Detail Drawer (30% - 3.5 Cols) -->
+<div class="lg:col-span-4 flex flex-col rounded-2xl bg-surface-container-low/85 shadow-2xl backdrop-blur-xl p-space-md space-y-space-md sticky top-[88px]">
+<!-- Drawer Header with Active Focus Card -->
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-primary-container/20 text-secondary border border-secondary/20">Active Focus</span>
+<span class="font-label-sm text-label-sm text-outline">SKU-OIL-1044</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Crystal Pure Sunflower Oil 1L</h2>
+<div class="font-body-sm text-body-sm text-secondary-fixed/90" dir="rtl">
+              زيت ذرة / عباد الشمس كريستال نقي
+            </div>
+</div>
+<button class="p-1 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]">open_in_new</span>
+</button>
+</div>
+<!-- Product Specs Metadata Card -->
+<div class="grid grid-cols-2 gap-2 rounded-xl bg-surface-container/60 p-3 font-body-sm text-body-sm">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Barcode (EAN-13)</span>
+<span class="font-mono text-on-surface font-semibold text-xs tracking-wider">6223000491024</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Packaging UOM</span>
+<span class="text-on-surface">1 Box = 12 Bottles</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Avg Cost / Unit</span>
+<span class="text-secondary font-semibold">90.00 EGP</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Standard Lead Time</span>
+<span class="text-on-surface">3 Days (Local Mill)</span>
+</div>
+</div>
+<!-- Warehouse Breakdown Mini Cards -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Hub Distribution Breakdown</span>
+<span class="font-label-sm text-label-sm text-secondary">3 Facilities</span>
+</div>
+<!-- Central Badr DC -->
+<div class="rounded-xl bg-surface-container/70 p-3 space-y-1.5 border-l-2 border-secondary">
+<div class="flex items-center justify-between font-body-sm">
+<span class="font-semibold text-on-surface">Central Badr Logistics Hub</span>
+<span class="font-numeric-metric text-on-surface text-sm">14,200 On Hand</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Reserved: <strong class="text-on-surface">2,000</strong></span>
+<span class="text-secondary font-semibold">Available: 12,200</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+<!-- 6th October Depot -->
+<div class="rounded-xl bg-surface-container/70 p-3 space-y-1.5 border-l-2 border-primary-container">
+<div class="flex items-center justify-between font-body-sm">
+<span class="font-semibold text-on-surface">6th October Depot</span>
+<span class="font-numeric-metric text-on-surface text-sm">5,400 On Hand</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Reserved: <strong class="text-on-surface">800</strong></span>
+<span class="text-secondary font-semibold">Available: 4,600</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Alexandria Coastal DC - LOW STOCK -->
+<div class="rounded-xl bg-error-container/10 p-3 space-y-1.5 border-l-2 border-error">
+<div class="flex items-center justify-between font-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">Alex Coastal DC</span>
+<span class="rounded bg-error-container/30 px-1 py-0.2 font-label-sm text-[10px] text-error font-bold">Deficit</span>
+</div>
+<span class="font-numeric-metric text-error text-sm">850 On Hand</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Safety Min: <strong class="text-on-surface">2,000</strong></span>
+<span class="text-error font-semibold">Shortage: -1,150</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+</div>
+<!-- Batch & Expiry Ledger Mini Table -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Batch &amp; Expiry Ledger</span>
+<span class="font-label-sm text-label-sm text-tertiary">FEFO Enforced</span>
+</div>
+<div class="overflow-hidden rounded-xl bg-surface-container/50">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-highest/50 font-label-sm text-label-sm text-outline uppercase">
+<th class="py-2 px-3">Batch / Lot</th>
+<th class="py-2 px-2">Expiry</th>
+<th class="py-2 px-2 text-right">Units</th>
+<th class="py-2 px-3 text-right">Protocol</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5 font-label-sm text-label-sm">
+<!-- Batch 1: Good -->
+<tr>
+<td class="py-2.5 px-3">
+<div class="font-mono text-on-surface font-semibold">#B24-1002</div>
+<div class="text-[10px] text-outline">Prod: 15 Sep 2024</div>
+</td>
+<td class="py-2.5 px-2 text-on-surface">
+                    14 Mar 2025
+                  </td>
+<td class="py-2.5 px-2 text-right font-medium text-on-surface">
+                    8,400
+                  </td>
+<td class="py-2.5 px-3 text-right">
+<span class="inline-flex rounded-full bg-emerald-500/10 px-2 py-0.5 text-emerald-400 font-semibold text-[10px]">
+                      Active / Good
+                    </span>
+</td>
+</tr>
+<!-- Batch 2: Markdown Alert / Expiring Soon -->
+<tr class="bg-tertiary-container/10">
+<td class="py-2.5 px-3">
+<div class="font-mono text-tertiary font-bold">#B24-0891</div>
+<div class="text-[10px] text-tertiary">Prod: 01 Nov 2023</div>
+</td>
+<td class="py-2.5 px-2">
+<span class="text-tertiary font-bold">22 Nov 2024</span>
+<div class="text-[10px] text-tertiary/80">In 22 Days</div>
+</td>
+<td class="py-2.5 px-2 text-right font-bold text-tertiary">
+                    1,200
+                  </td>
+<td class="py-2.5 px-3 text-right">
+<span class="inline-flex rounded-full bg-tertiary-container/40 px-2 py-0.5 text-tertiary font-bold text-[10px] animate-pulse">
+                      Promo Priority
+                    </span>
+</td>
+</tr>
+<!-- Batch 3: Optimal -->
+<tr>
+<td class="py-2.5 px-3">
+<div class="font-mono text-on-surface font-semibold">#B24-1150</div>
+<div class="text-[10px] text-outline">Prod: 20 Oct 2024</div>
+</td>
+<td class="py-2.5 px-2 text-on-surface">
+                    18 Oct 2025
+                  </td>
+<td class="py-2.5 px-2 text-right font-medium text-on-surface">
+                    10,850
+                  </td>
+<td class="py-2.5 px-3 text-right">
+<span class="inline-flex rounded-full bg-emerald-500/10 px-2 py-0.5 text-emerald-400 font-semibold text-[10px]">
+                      Optimal
+                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Quick Stock Actions Footer -->
+<div class="space-y-2 pt-2 border-t border-white/5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Quick Operations</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="inline-flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-high px-3 py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">swap_horiz</span>
+<span>Initiate Transfer</span>
+</button>
+<button class="inline-flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-high px-3 py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">shopping_cart_checkout</span>
+<span>Purchase Order</span>
+</button>
+<button class="inline-flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-high px-3 py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px] text-tertiary">qr_code_2</span>
+<span>Print Barcode</span>
+</button>
+<button class="inline-flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-high px-3 py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px] text-error">edit_note</span>
+<span>Stock Adjustment</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Telematics Operational Bar -->
+<div class="relative z-10 flex flex-col sm:flex-row items-center justify-between rounded-xl bg-surface-container-lowest/80 px-space-md py-2.5 font-label-sm text-label-sm text-on-surface-variant gap-2 border border-white/5">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-secondary">
+<span class="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+          Connected: Cairo DC WMS Master Node
+        </span>
+<span class="text-outline">•</span>
+<span>Replication Latency: <strong class="text-on-surface">14ms</strong></span>
+<span class="text-outline">•</span>
+<span>FIFO / FEFO Enforcement: <strong class="text-secondary font-semibold">Strict Active</strong></span>
+</div>
+<div class="flex items-center gap-4">
+<span>Last full audit synchronization: <strong class="text-on-surface">Today, 14:32:08 CLT</strong></span>
+<button class="text-secondary hover:underline">View Audit Log</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

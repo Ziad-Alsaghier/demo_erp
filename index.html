@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Wise ERP - Enterprise Distribution & Fleet Operating System</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#00142a",
+            "surface-dim": "#00142a",
+            "surface-bright": "#273a53",
+            "surface-container": "#0a2038",
+            "surface-container-high": "#162b43",
+            "surface-container-highest": "#22364e",
+            "surface-container-low": "#061c33",
+            "surface-container-lowest": "#000f21",
+            primary: "#94ccff",
+            "primary-container": "#1e9be8",
+            secondary: "#76d1ff",
+            "secondary-container": "#0a9ccd",
+            tertiary: "#aec6ff",
+            "on-surface": "#d2e4ff",
+            "on-surface-variant": "#bfc7d3",
+            outline: "#89929c"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Plus Jakarta Sans", "sans-serif"],
+            arabic: ["Cairo", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/design-system.css"/>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/nav-shell.js"></script>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased min-h-screen selection:bg-secondary selection:text-surface">
+  
+  <!-- Ambient Glow Effects -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-primary-container/20 blur-[140px]"></div>
+    <div class="absolute top-1/3 -right-40 w-[500px] h-[500px] rounded-full bg-secondary/15 blur-[140px]"></div>
+    <div class="absolute -bottom-40 left-1/3 w-[600px] h-[600px] rounded-full bg-[#2DD4A7]/10 blur-[160px]"></div>
+  </div>
+
+  <!-- Top Navigation Header -->
+  <header class="sticky top-0 z-50 w-full bg-[#00142a]/85 backdrop-blur-xl border-b border-white/10 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-secondary via-primary-container to-primary flex items-center justify-center shadow-lg shadow-primary-container/30 group-hover:scale-105 transition-transform">
+          <span class="material-symbols-outlined text-surface font-bold text-[24px]">hub</span>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-display text-xl font-bold tracking-tight text-on-surface">WISE <span class="text-primary font-normal">ERP</span></span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-secondary/20 text-secondary border border-secondary/30">DEMO SUITE</span>
+          </div>
+          <span class="text-xs text-on-surface-variant font-medium" data-i18n="brand_subtitle">Distribution Egypt · مصر للتوزيع</span>
+        </div>
+      </a>
+
+      <!-- Quick Search Bar (Command Palette Trigger) -->
+      <div class="hidden md:flex flex-1 max-w-md mx-6">
+        <div class="relative w-full header-search-wrap cursor-pointer" data-action="open-cmd">
+          <span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+          <input type="text" readonly placeholder="Press Ctrl+K to jump to any screen..." data-i18n-placeholder="search_placeholder" class="w-full pl-9 pr-12 py-2 bg-surface-container-high/60 border border-white/15 rounded-xl text-sm text-on-surface placeholder:text-outline cursor-pointer focus:outline-none focus:border-secondary transition-all"/>
+          <span class="absolute right-3 top-2 px-1.5 py-0.5 rounded bg-surface-container border border-white/10 text-[11px] text-outline font-mono">⌘K</span>
+        </div>
+      </div>
+
+      <!-- Controls: Language, Guided Walkthrough, Direct Dashboard -->
+      <div class="flex items-center gap-3">
+        <!-- Language Switcher -->
+        <div class="flex items-center border border-white/15 rounded-xl p-1 bg-surface-container-high/60">
+          <button data-lang-btn="en" class="px-3 py-1 rounded-lg text-xs font-bold bg-secondary-container text-on-secondary-container transition-all">English</button>
+          <button data-lang-btn="ar" class="px-3 py-1 rounded-lg text-xs font-bold text-on-surface-variant hover:text-on-surface transition-all">العربية</button>
+        </div>
+
+        <!-- Guided Tour Button -->
+        <a href="auth/corporate-sso-login.html" class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-on-surface bg-surface-container-high hover:bg-surface-container-highest border border-white/15 transition-all">
+          <span class="material-symbols-outlined text-secondary text-[18px]">play_circle</span>
+          <span>SSO Login Flow</span>
+        </a>
+
+        <!-- Launch Dashboard Button -->
+        <a href="analytics/executive-dashboard.html" class="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-surface bg-gradient-to-r from-secondary to-primary-container hover:brightness-110 shadow-lg shadow-primary-container/25 transition-all">
+          <span class="material-symbols-outlined font-bold text-[18px]">rocket_launch</span>
+          <span>Launch Dashboard</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Showcase Section -->
+  <main class="relative z-10 max-w-7xl mx-auto px-6 py-12">
+    <div class="text-center max-w-4xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xs uppercase tracking-wider font-bold mb-6 shadow-[0_0_15px_rgba(118,209,255,0.15)]">
+        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        <span>Luminous Enterprise Fleet · Version 2024.4</span>
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+        Wise ERP <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-primary-container">Distribution Suite</span>
+      </h1>
+      
+      <p class="font-arabic text-xl sm:text-2xl text-secondary font-medium mb-4" dir="rtl">
+        المنظومة المؤسسية الشاملة لإدارة العمليات وسلاسل الإمداد والتوزيع والتكامل المالي
+      </p>
+
+      <p class="text-base sm:text-lg text-on-surface-variant max-w-3xl mx-auto mb-8 leading-relaxed">
+        Complete enterprise architecture featuring 19 optimized functional screens across Supply Chain, Financial Governance, CRM Pipeline, Workforce Operations, and Role-Based Security with real-time bilingual (English/Arabic) localization.
+      </p>
+
+      <!-- Key Capabilities Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-3 text-xs text-on-surface-variant">
+        <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high/80 border border-white/10">
+          <span class="material-symbols-outlined text-secondary text-[16px]">translate</span>
+          <span>Dynamic EN/AR + RTL</span>
+        </span>
+        <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high/80 border border-white/10">
+          <span class="material-symbols-outlined text-primary text-[16px]">receipt_long</span>
+          <span>ETA e-Invoice v2.1 Ready</span>
+        </span>
+        <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high/80 border border-white/10">
+          <span class="material-symbols-outlined text-[#2DD4A7] text-[16px]">local_shipping</span>
+          <span>Multi-Hub Fleet Logistics</span>
+        </span>
+        <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high/80 border border-white/10">
+          <span class="material-symbols-outlined text-tertiary text-[16px]">security</span>
+          <span>RBAC &amp; Field Masking</span>
+        </span>
+        <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high/80 border border-white/10">
+          <span class="material-symbols-outlined text-secondary text-[16px]">keyboard</span>
+          <span>Ctrl+K Command Palette</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Live System Overview Counters -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div class="p-6 rounded-2xl bg-surface-container/70 backdrop-blur-xl border border-white/10 text-center">
+        <div class="font-display text-4xl font-extrabold text-secondary mb-1">19</div>
+        <div class="text-xs uppercase tracking-wider text-outline font-semibold">Production Screens</div>
+      </div>
+      <div class="p-6 rounded-2xl bg-surface-container/70 backdrop-blur-xl border border-white/10 text-center">
+        <div class="font-display text-4xl font-extrabold text-[#2DD4A7] mb-1">7</div>
+        <div class="text-xs uppercase tracking-wider text-outline font-semibold">Enterprise Domains</div>
+      </div>
+      <div class="p-6 rounded-2xl bg-surface-container/70 backdrop-blur-xl border border-white/10 text-center">
+        <div class="font-display text-4xl font-extrabold text-primary mb-1">100%</div>
+        <div class="text-xs uppercase tracking-wider text-outline font-semibold">Bilingual (EN / AR)</div>
+      </div>
+      <div class="p-6 rounded-2xl bg-surface-container/70 backdrop-blur-xl border border-white/10 text-center">
+        <div class="font-display text-4xl font-extrabold text-tertiary mb-1">6</div>
+        <div class="text-xs uppercase tracking-wider text-outline font-semibold">Operational Hubs</div>
+      </div>
+    </div>
+
+    <!-- Guided Business Workflow Paths -->
+    <div class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-white">Recommended Workflow Tours</h2>
+          <p class="text-sm text-on-surface-variant">Step-by-step logic sequences connecting screens across enterprise lifecycles</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Tour 1: Supply Chain & Inbound -->
+        <div class="p-6 rounded-2xl bg-surface-container/60 backdrop-blur-xl border border-white/10 hover:border-secondary/40 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-[24px]">warehouse</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Supply Chain Inbound Tour</h3>
+            <p class="text-xs text-on-surface-variant mb-4">
+              From receiving goods dockside to automated batch inspection, stock allocation, inter-warehouse transfers, and barcode printing.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs text-outline mb-6">
+              <span class="px-2 py-1 rounded bg-surface-container-high">1. Goods Receipts (GRN)</span>
+              <span class="px-2 py-1 rounded bg-surface-container-high">2. Stock on Hand</span>
+              <span class="px-2 py-1 rounded bg-surface-container-high">3. Warehouse Transfers</span>
+              <span class="px-2 py-1 rounded bg-surface-container-high">4. Barcode Labels</span>
+            </div>
+          </div>
+          <a href="operations/goods-receipts-grn.html" class="flex items-center justify-between text-sm font-semibold text-secondary group-hover:translate-x-1 transition-transform">
+            <span>Start Inbound Tour</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Tour 2: Commercial & Sales -->
+        <div class="p-6 rounded-2xl bg-surface-container/60 backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-[24px]">trending_up</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Commercial &amp; CRM Pipeline Tour</h3>
+            <p class="text-xs text-on-surface-variant mb-4">
+              Tracking corporate opportunities across kanban stages, configuring price-tier quotations, and customer 360 dossiers.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs text-outline mb-6">
+              <span class="px-2 py-1 rounded bg-surface-container-high">1. Pipeline Kanban</span>
+              <span class="px-2 py-1 rounded bg-surface-container-high">2. Sales Quotation Form</span>
+              <span class="px-2 py-1 rounded bg-surface-container-high">3. Customer 360</span>
+            </div>
+          </div>
+          <a href="sales/sales-pipeline-kanban.html" class="flex items-center justify-between text-sm font-semibold text-primary group-hover:translate-x-1 transition-transform">
+            <span>Start Commercial Tour</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Tour 3: Financial Governance -->
+        <div class="p-6 rounded-2xl bg-surface-container/60 backdrop-blur-xl border border-white/10 hover:border-[#2DD4A7]/40 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#2DD4A7]/15 text-[#2DD4A7] flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-[24px]">account_balance</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Financial Integrity &amp; COA Tour</h3>
+            <p class="text-xs text-on-surface-variant mb-4">
+              Full general ledger compliance, chart of accounts tree, balanced journal vouchers, and treasury cheque portfolio.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs text-outline mb-6">
+              <span class="px-2 py-1 rounded bg-surface-container-high">1. Chart of Accounts</span>
+              <span class="px-2 py-1 rounded bg-surface-container-high">2. Journal Entries</span>
+              <span class="px-2 py-1 rounded bg-surface-container-high">3. Treasury &amp; Cheques</span>
+            </div>
+          </div>
+          <a href="finance/chart-of-accounts.html" class="flex items-center justify-between text-sm font-semibold text-[#2DD4A7] group-hover:translate-x-1 transition-transform">
+            <span>Start Financial Tour</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Complete 19-Screen Modular Directory -->
+    <div>
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-white">All 19 System Screens</h2>
+          <p class="text-sm text-on-surface-variant">Click any screen to open directly with full bilingual and interactive support</p>
+        </div>
+      </div>
+
+      <!-- Domain 1: Analytics & Executive Command -->
+      <div class="mb-10">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-secondary mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px]">monitoring</span>
+          <span>Analytics &amp; Executive Command (2 Screens)</span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="analytics/executive-dashboard.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-secondary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-secondary material-symbols-outlined text-[24px]">monitoring</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-secondary transition-colors">Executive Dashboard</span>
+                <span class="text-xs font-arabic text-secondary">لوحة القيادة التنفيذية</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Real-time revenue KPIs, telematics dispatch, hub profitability, and operational command metrics.</p>
+            </div>
+          </a>
+          <a href="analytics/reports-center.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-secondary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-secondary material-symbols-outlined text-[24px]">summarize</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-secondary transition-colors">Reports Center</span>
+                <span class="text-xs font-arabic text-secondary">مركز التقارير الموحد</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Multi-hub business intelligence, scheduled reports distribution, CSV/Excel export, and compliance logs.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Domain 2: Operations & Logistics -->
+      <div class="mb-10">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px]">warehouse</span>
+          <span>Operations, Inventory &amp; Logistics (5 Screens)</span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="operations/products-catalog.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-primary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-primary material-symbols-outlined text-[24px]">category</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-primary transition-colors">Products Catalog</span>
+                <span class="text-xs font-arabic text-primary">دليل الأصناف والأسعار</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Multi-tier wholesale &amp; retail price lists, SKU hierarchy, and tax categorizations.</p>
+            </div>
+          </a>
+          <a href="operations/stock-availability.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-primary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-primary material-symbols-outlined text-[24px]">inventory_2</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-primary transition-colors">Stock on Hand &amp; Availability</span>
+                <span class="text-xs font-arabic text-primary">المخزون الفعلي والجاهزية</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Real-time bin balances, lot tracking, cold-chain temperature telemetry, and safety stock alerts.</p>
+            </div>
+          </a>
+          <a href="operations/goods-receipts-grn.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-primary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-primary material-symbols-outlined text-[24px]">receipt_long</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-primary transition-colors">Goods Receipts (GRN)</span>
+                <span class="text-xs font-arabic text-primary">أذون استلام البضائع</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Supplier PO 3-way matching, dock inspection, cold chain telematics logging, and automatic GL posting.</p>
+            </div>
+          </a>
+          <a href="operations/inter-warehouse-transfers.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-primary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-primary material-symbols-outlined text-[24px]">move_up</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-primary transition-colors">Warehouse Transfers</span>
+                <span class="text-xs font-arabic text-primary">التحويلات بين المستودعات</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Transit custody dispatch, reefer truck assignment, waybills, and dispatch confirmation.</p>
+            </div>
+          </a>
+          <a href="operations/barcode-shelf-labels.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-primary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-primary material-symbols-outlined text-[24px]">barcode_scanner</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-primary transition-colors">Barcode &amp; Shelf Labels</span>
+                <span class="text-xs font-arabic text-primary">طباعة الباركود والملصقات</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">High-throughput thermal printer spooling, QR/Code-128 formats, pallet tags, and shelf talkers.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Domain 3: Sales & CRM -->
+      <div class="mb-10">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-[#2DD4A7] mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px]">view_kanban</span>
+          <span>Sales &amp; Customer Relationship Management (3 Screens)</span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <a href="sales/sales-pipeline-kanban.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-[#2DD4A7]/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-[#2DD4A7] material-symbols-outlined text-[24px]">view_kanban</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-[#2DD4A7] transition-colors">Pipeline &amp; Kanban</span>
+                <span class="text-xs font-arabic text-[#2DD4A7]">مسار المبيعات ولوحة كانبان</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Enterprise FMCG opportunity boards, rep allocations, deal stages, and expected close metrics.</p>
+            </div>
+          </a>
+          <a href="sales/sales-quotation.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-[#2DD4A7]/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-[#2DD4A7] material-symbols-outlined text-[24px]">request_quote</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-[#2DD4A7] transition-colors">Sales Quotation Form</span>
+                <span class="text-xs font-arabic text-[#2DD4A7]">نموذج عروض الأسعار</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Multi-currency quotation builder with automatic 14% VAT calculation, credit term limits, and approval routing.</p>
+            </div>
+          </a>
+          <a href="sales/customer-360.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-[#2DD4A7]/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-[#2DD4A7] material-symbols-outlined text-[24px]">contacts</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-[#2DD4A7] transition-colors">Customer 360</span>
+                <span class="text-xs font-arabic text-[#2DD4A7]">ملف العميل المتكامل 360°</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Comprehensive customer financial exposure, lifetime revenue, trade credit rating, and transaction history.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Domain 4: Finance & Accounting -->
+      <div class="mb-10">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-tertiary mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px]">account_balance</span>
+          <span>Financial Governance &amp; General Ledger (3 Screens)</span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <a href="finance/chart-of-accounts.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-tertiary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-tertiary material-symbols-outlined text-[24px]">table_chart</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-tertiary transition-colors">Chart of Accounts</span>
+                <span class="text-xs font-arabic text-tertiary">دليل الحسابات الشجري</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Hierarchical EAS/IFRS account tree with automated debit/credit balancing, branch consolidation, and tier filtering.</p>
+            </div>
+          </a>
+          <a href="finance/journal-entries.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-tertiary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-tertiary material-symbols-outlined text-[24px]">menu_book</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-tertiary transition-colors">Journal Entries &amp; Vouchers</span>
+                <span class="text-xs font-arabic text-tertiary">قيود اليومية وسندات الصرف</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Multi-line journal vouchers with source document attachments, auto-reversal, and audit approval workflow.</p>
+            </div>
+          </a>
+          <a href="finance/treasury-cheques.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-tertiary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-tertiary material-symbols-outlined text-[24px]">savings</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-tertiary transition-colors">Treasury &amp; Cheques</span>
+                <span class="text-xs font-arabic text-tertiary">الخزينة ومحفظة الشيكات</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Cash register positions, PDC cheque portfolio tracking, deposit clearance, and bank reconciliation.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Domain 5: People, HR & Mobile -->
+      <div class="mb-10">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-secondary mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px]">groups</span>
+          <span>Human Capital &amp; Mobile Attendance (2 Screens)</span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="hr/daily-attendance-board.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-secondary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-secondary material-symbols-outlined text-[24px]">how_to_reg</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-secondary transition-colors">Daily Attendance Board</span>
+                <span class="text-xs font-arabic text-secondary">لوحة الحضور والانصراف</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Biometric shift radar, late punches, overtime reconciliation, and fleet driver readiness status.</p>
+            </div>
+          </a>
+          <a href="hr/my-attendance-mobile.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-secondary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-secondary material-symbols-outlined text-[24px]">smartphone</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-secondary transition-colors">My Attendance (Mobile Simulator)</span>
+                <span class="text-xs font-arabic text-secondary">سجل حضوري الذكي (موبايل)</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Mobile self-service view with geofencing punch-in, biometric check, shift schedule, and leave balances.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Domain 6: Administration & Security -->
+      <div class="mb-10">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px]">security</span>
+          <span>Administration, Security &amp; Data Privacy (2 Screens)</span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="security/security-permission-matrix.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-primary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-primary material-symbols-outlined text-[24px]">admin_panel_settings</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-primary transition-colors">Security Permission Matrix</span>
+                <span class="text-xs font-arabic text-primary">مصفوفة صلاحيات المستخدمين</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Granular Role-Based Access Control (RBAC) across ERP modules, hub scopes, and CRUD execution policies.</p>
+            </div>
+          </a>
+          <a href="security/field-level-rules.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-primary/40 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-primary material-symbols-outlined text-[24px]">vpn_key</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-primary transition-colors">Field-Level Rules &amp; Masking</span>
+                <span class="text-xs font-arabic text-primary">قواعد حجب وتشفير الحقول</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">PII data redaction, financial figure masking by clearance level, encryption tokens, and regulatory audit rules.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Domain 7: Authentication & Access Control -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-outline mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[16px]">lock</span>
+          <span>Authentication &amp; Identity Gateway (2 Screens)</span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="auth/corporate-sso-login.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-white/30 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-white material-symbols-outlined text-[24px]">login</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-secondary transition-colors">Corporate SSO Login</span>
+                <span class="text-xs font-arabic text-white">بوابة الدخول الموحد SSO</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Active Directory / SAML 2.0 corporate authentication gateway with fleet logistics identity credentials.</p>
+            </div>
+          </a>
+          <a href="auth/two-factor-authentication.html" class="p-5 rounded-xl bg-surface-container/60 hover:bg-surface-container border border-white/10 hover:border-white/30 transition-all flex items-start gap-4 group">
+            <span class="p-3 rounded-lg bg-surface-container-high text-white material-symbols-outlined text-[24px]">verified_user</span>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white group-hover:text-secondary transition-colors">Two-Factor Authentication (MFA)</span>
+                <span class="text-xs font-arabic text-white">المصادقة الثنائية والتحقق الأمني</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Hardware token and biometric session validation with live countdown HUD and cryptographic audit signature.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-20 border-t border-white/10 bg-[#00142a]/95 py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-outline">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-on-surface">Wise ERP Distribution Suite</span>
+        <span>·</span>
+        <span>Luminous Enterprise Fleet Design System</span>
+      </div>
+      <div>Egyptian Accounting Standards (EAS) · ETA e-Invoice v2.1 Compliance Ready</div>
+    </div>
+  </footer>
+
+</body>
+</html>

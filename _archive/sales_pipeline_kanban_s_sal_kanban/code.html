@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#00142a", "background": "#00142a", "error-container": "#93000a", "on-secondary-fixed-variant": "#004d67", "on-tertiary-fixed": "#001a42", "on-primary-fixed": "#001d32", "outline-variant": "#3f4851", "surface-container-lowest": "#000f21", "on-error-container": "#ffdad6", "on-surface-variant": "#bfc7d3", "inverse-surface": "#d2e4ff", "secondary": "#76d1ff", "primary-fixed-dim": "#94ccff", "secondary-fixed": "#c2e8ff", "outline": "#89929c", "on-tertiary": "#122f60", "tertiary": "#aec6ff", "surface-dim": "#00142a", "error": "#ffb4ab", "secondary-container": "#0a9ccd", "surface-container": "#0a2038", "on-tertiary-container": "#0d2b5c", "tertiary-container": "#7b94cb", "on-tertiary-fixed-variant": "#2c4678", "inverse-on-surface": "#1d3149", "surface-container-highest": "#22364e", "tertiary-fixed": "#d8e2ff", "on-surface": "#d2e4ff", "on-error": "#690005", "primary": "#94ccff", "on-background": "#d2e4ff", "surface-container-low": "#061c33", "on-primary-fixed-variant": "#004b74", "on-secondary-container": "#002e3f", "surface-tint": "#94ccff", "primary-container": "#1e9be8", "on-primary-container": "#002f4c", "surface-bright": "#273a53", "surface-variant": "#22364e", "on-primary": "#003352", "secondary-fixed-dim": "#76d1ff", "on-secondary": "#003548", "inverse-primary": "#006399", "primary-fixed": "#cde5ff", "on-secondary-fixed": "#001e2b", "surface-container-high": "#162b43", "tertiary-fixed-dim": "#aec6ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-md": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "numeric-metric": ["Inter"], "body-lg": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "title-md": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "numeric-metric": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary-fixed"><aside class="fixed left-0 top-0 h-full w-[264px] bg-[#00142a]/90 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)]"><div class="flex flex-col h-full overflow-hidden"><div class="h-[72px] px-space-lg flex items-center justify-between border-b border-white/5"><div class="flex items-center gap-space-sm"><img alt="Wise Distribution Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDryduxKmod-XeUaCCLPODn7x8Bb9-rsbknpIVVZvb6dl9I5SvGzz3nR48zD_r9ZwpWSS8nt_iRQAS9U9HhA1cXCJ-ZF8ERMnEWvF_A7sN-9_UUXuEU4Oaof5cONDiIdMAD7OTdpW1HfTLzRvxm2YwVGoF3aZw7yzkGYBlLbK2rBweBz7v4phCZ6vU3nm_LoPBKPbJwEKXrLuDMXKpS3Jn8asUt_l9QeFJhtSYe0emy"/><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">Wise ERP</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Distribution</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg transition-colors"><span class="material-symbols-outlined text-[18px]">dock_to_left</span></button></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-xs" data-active-classes="bg-gradient-to-r from-secondary/20 to-primary-container/10 text-secondary border-l-2 border-secondary font-semibold shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]"><div class="px-space-sm pt-2 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Analytics</div><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="executive-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>Executive Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sales-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">trending_up</span><span>Sales Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="inventory-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span>Inventory Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="hr-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>HR Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reports-center" href="#"><span class="material-symbols-outlined text-[18px]">summarize</span><span>Reports Center</span></a><div class="px-space-sm pt-4 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Operations</div><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="geography-tree-&amp;-areas" href="#"><span class="material-symbols-outlined text-[18px]">account_tree</span><span>Geography Tree &amp; Areas</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="unit-conversions" href="#"><span class="material-symbols-outlined text-[18px]">swap_horiz</span><span>Unit Conversions</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="product-catalog" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span>Product Catalog</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="inventory-&amp;-stock" href="#"><span class="material-symbols-outlined text-[18px]">warehouse</span><span>Inventory &amp; Stock</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="warehouses" href="#"><span class="material-symbols-outlined text-[18px]">store</span><span>Warehouses</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="grn-&amp;-receipts" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>GRN &amp; Receipts</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="transfers" href="#"><span class="material-symbols-outlined text-[18px]">move_up</span><span>Transfers</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="deliveries" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span>Deliveries</span></a><div class="px-space-sm pt-4 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Sales &amp; CRM</div><a aria-current="page" class="flex items-center gap-3 px-3 py-2 rounded-lg transition-all bg-gradient-to-r from-secondary/20 to-primary-container/10 text-secondary border-l-2 border-secondary font-semibold shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]" data-path="pipeline-&amp;-kanban" href="#"><span class="material-symbols-outlined text-[18px]">view_kanban</span><span>Pipeline &amp; Kanban</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="deals" href="#"><span class="material-symbols-outlined text-[18px]">handshake</span><span>Deals</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customer-360" href="#"><span class="material-symbols-outlined text-[18px]">contacts</span><span>Customer 360</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="quotations" href="#"><span class="material-symbols-outlined text-[18px]">request_quote</span><span>Quotations</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sales-orders" href="#"><span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span><span>Sales Orders</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="invoices" href="#"><span class="material-symbols-outlined text-[18px]">receipt</span><span>Invoices</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="commissions" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span>Commissions</span></a><div class="px-space-sm pt-4 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Finance</div><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="accounting-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span><span>Accounting Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="chart-of-accounts" href="#"><span class="material-symbols-outlined text-[18px]">table_chart</span><span>Chart of Accounts</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="journal-entries" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Journal Entries</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="treasury-&amp;-cheques" href="#"><span class="material-symbols-outlined text-[18px]">savings</span><span>Treasury &amp; Cheques</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="bills-&amp;-payments" href="#"><span class="material-symbols-outlined text-[18px]">credit_score</span><span>Bills &amp; Payments</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="financial-reports" href="#"><span class="material-symbols-outlined text-[18px]">finance</span><span>Financial Reports</span></a><div class="px-space-sm pt-4 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">People</div><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="hr-attendance-board" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>HR Attendance Board</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="shift-schedule" href="#"><span class="material-symbols-outlined text-[18px]">calendar_month</span><span>Shift Schedule</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="timesheets" href="#"><span class="material-symbols-outlined text-[18px]">schedule</span><span>Timesheets</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="leave-requests" href="#"><span class="material-symbols-outlined text-[18px]">event_busy</span><span>Leave Requests</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="payroll-&amp;-payslips" href="#"><span class="material-symbols-outlined text-[18px]">wallet</span><span>Payroll &amp; Payslips</span></a><div class="px-space-sm pt-4 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Administration</div><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="security-&amp;-permissions" href="#"><span class="material-symbols-outlined text-[18px]">security</span><span>Security &amp; Permissions</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="role-matrix" href="#"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span>Role Matrix</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span>Audit Log</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>System Settings</span></a></nav></div><div class="p-space-md border-t border-white/10 bg-surface-container-low/70 backdrop-blur-md flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-secondary">hub</span>Cairo Central Terminal</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm text-secondary-fixed">Live Cloud Sync Active</span><span class="material-symbols-outlined text-[16px] text-outline hover:text-on-surface cursor-pointer">unfold_more</span></div></div></div></aside><div class="pl-[264px]"><header class="fixed top-0 left-[264px] right-0 h-[72px] z-40 bg-[#00142a]/85 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-secondary">home</span><span>/</span><span class="text-outline hover:text-on-surface cursor-pointer">Platform</span><span>/</span><span class="text-on-surface font-semibold">Executive Dashboard</span></div><div class="flex-1 max-w-xl mx-space-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-12 py-2 bg-[#04122b]/80 border border-white/15 rounded-lg text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/40 transition-all" placeholder="Search customers, products, documents, employees, deals (Ctrl+K)..." type="text"/><span class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container-high border border-white/10 font-label-sm text-label-sm text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="relative"><select class="appearance-none bg-surface-container-high/60 border border-white/15 text-on-surface font-body-sm text-body-sm rounded-lg pl-3 pr-8 py-1.5 hover:bg-surface-container-highest cursor-pointer focus:outline-none focus:border-secondary"><option>Cairo HQ &amp; Central Hub</option><option>Alexandria Coastal Hub</option><option>Giza Fulfillment</option><option>Delta Mansoura</option></select><span class="material-symbols-outlined absolute right-2 top-2 pointer-events-none text-outline text-[18px]">expand_more</span></div><div class="flex items-center border border-white/15 rounded-lg p-0.5 bg-surface-container-high/40"><button class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-container">EN</button><button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">ع</button></div><button class="p-1.5 rounded-lg border border-white/15 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/15 bg-surface-container-high/40 font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span><span>Oct 1, 2024 - Oct 31, 2024</span></div><div class="relative"><button class="p-2 rounded-lg border border-white/15 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full font-label-sm text-[10px] bg-secondary text-on-secondary font-bold shadow-[0_0_10px_rgba(118,209,255,0.6)]">5</span></div><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg font-body-sm text-body-sm font-semibold text-white bg-gradient-to-r from-secondary via-primary-container to-inverse-primary border border-white/30 shadow-[0_8px_24px_rgba(30,155,232,0.4)] hover:brightness-110 active:scale-95 transition-all"><span class="material-symbols-outlined text-[18px]">add</span><span>Create</span></button><div class="h-6 w-px bg-white/15 mx-1"></div><div class="flex items-center gap-3 pl-1"><div class="flex flex-col text-right"><div class="flex items-center gap-1.5 justify-end"><span class="font-title-md text-title-md font-semibold text-on-surface">Tarek El-Sayed</span><span class="px-1.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-primary-container/20 text-secondary border border-secondary/30">Super Admin</span></div><span class="font-label-sm text-label-sm text-outline">Scope: All</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-secondary/40 shadow-[0_0_12px_rgba(91,203,255,0.2)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCultRCtgMRciVnK51-F0eUsLbvHS18gsIaQOxtHuKNKgGK7VdoAcDl4WgDbSh4XJ91VDiO50qXeDlh2vOYWYtqIlueYzfKqwUrqKJTHj0hymeNiiU-85wfsCNq8hfjNvNmvg1bEXYoxNnei7URQsxx59IdhDLKU2LngBC4FB7aOhLbBQMr216iGCzBul8s67Wl_IOkppRPIUtFFNEIsNY2a6XrqPz5ia7nCatKUCw"/></div></div></header><main class="relative pt-[72px] min-h-screen bg-surface"><div class="fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#1E9BE8]/25 blur-[120px]"></div><div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-[#5BCBFF]/18 blur-[120px]"></div></div><div class="relative z-10 w-full max-w-[1600px] mx-auto p-space-xl"><div class="flex flex-col w-full gap-space-lg">
+<!-- TOP COMMAND & PIPELINE CONTROLS BAR -->
+<section class="relative bg-surface-container/70 backdrop-blur-2xl rounded-xl p-space-md shadow-xl flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<!-- Left Filter Stack -->
+<div class="flex flex-wrap items-center gap-space-sm w-full xl:w-auto">
+<!-- Pipeline Selector -->
+<div class="relative min-w-[240px]">
+<label class="block font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Active Pipeline</label>
+<div class="relative">
+<select class="w-full bg-surface-container-high/90 text-on-surface font-title-md text-title-md font-semibold rounded-lg pl-3 pr-9 py-2 appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary/50">
+<option selected="">Enterprise FMCG Pipeline 2024</option>
+<option>Modern Trade Q4 Regional Flow</option>
+<option>HORECA Key Accounts 2024</option>
+<option>Pharma &amp; FMCG Synergies</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-secondary text-[20px]">account_tree</span>
+</div>
+</div>
+<!-- Team Scope Selector -->
+<div class="relative min-w-[210px]">
+<label class="block font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Commercial Team</label>
+<div class="relative">
+<select class="w-full bg-surface-container-high/90 text-on-surface font-body-md text-body-md rounded-lg pl-3 pr-9 py-2 appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary/50">
+<option selected="">Cairo Metro Commercial Team</option>
+<option>Alexandria &amp; Delta Squad</option>
+<option>Upper Egypt Hub Division</option>
+<option>Direct Wholesale Squad</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-outline text-[18px]">groups</span>
+</div>
+</div>
+<!-- Reps Multi-Filter -->
+<div class="relative min-w-[170px]">
+<label class="block font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Assigned Rep</label>
+<div class="relative">
+<select class="w-full bg-surface-container-high/90 text-on-surface font-body-md text-body-md rounded-lg pl-3 pr-9 py-2 appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary/50">
+<option selected="">All Reps (12 Active)</option>
+<option>Mostafa Karim (8 Deals)</option>
+<option>Sarah Nour (6 Deals)</option>
+<option>Ahmed Zaki (7 Deals)</option>
+<option>Dina Adel (5 Deals)</option>
+<option>Tamer Youssef (4 Deals)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-outline text-[18px]">badge</span>
+</div>
+</div>
+<!-- Compact / Dense Toggle & Layout modes -->
+<div class="flex items-end self-end pb-0.5 pl-1">
+<div class="flex items-center bg-surface-container-high/60 rounded-lg p-1 gap-1">
+<button class="p-1.5 rounded bg-secondary/20 text-secondary" title="Kanban Board">
+<span class="material-symbols-outlined text-[18px]">view_kanban</span>
+</button>
+<button class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container-highest transition-colors" title="Table View">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</button>
+<button class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container-highest transition-colors" title="Forecast Analytics">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right KPI Callout & Primary Action -->
+<div class="flex flex-wrap items-center gap-space-md w-full xl:w-auto justify-between xl:justify-end">
+<!-- Total Pipeline Readout Banner -->
+<div class="bg-surface-container-high/70 backdrop-blur-md rounded-xl px-space-md py-2 shadow-sm flex items-center gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Total Pipeline</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary/10 text-secondary font-medium">38 Deals</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-label-sm text-label-sm text-outline font-semibold">EGP</span>
+<span class="font-numeric-metric text-numeric-metric text-on-surface font-bold tracking-tight">48,650,000</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-variant"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Weighted Forecast</span>
+<span class="font-title-md text-title-md text-secondary-fixed font-bold">29.4M <span class="font-body-sm text-body-sm text-outline font-normal">EGP</span></span>
+</div>
+</div>
+<!-- Signature Primary Create Button -->
+<button class="flex items-center gap-2 px-space-lg py-2.5 rounded-xl font-title-md text-title-md font-semibold text-white bg-gradient-to-r from-secondary via-primary-container to-inverse-primary shadow-lg shadow-primary-container/25 hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ New Deal</span>
+</button>
+</div>
+</section>
+<!-- QUICK STATS RIBBON -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container/60 backdrop-blur-xl rounded-xl p-space-md flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Win Rate (Q4 MTD)</span>
+<span class="font-numeric-metric text-numeric-metric text-on-surface font-bold mt-1">68.4%</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +4.2% vs target
+        </span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">trophy</span>
+</div>
+</div>
+<div class="bg-surface-container/60 backdrop-blur-xl rounded-xl p-space-md flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Avg Sales Cycle</span>
+<span class="font-numeric-metric text-numeric-metric text-on-surface font-bold mt-1">18.6 <span class="font-title-md text-title-md text-outline">Days</span></span>
+<span class="font-body-sm text-body-sm text-secondary-fixed flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 2.1 days faster
+        </span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+</div>
+<div class="bg-surface-container/60 backdrop-blur-xl rounded-xl p-space-md flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Supervisory Holds</span>
+<span class="font-numeric-metric text-numeric-metric text-on-surface font-bold mt-1">4 <span class="font-title-md text-title-md text-outline">Pending</span></span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> Immediate Action
+        </span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="bg-surface-container/60 backdrop-blur-xl rounded-xl p-space-md flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Credit Clearance Rate</span>
+<span class="font-numeric-metric text-numeric-metric text-on-surface font-bold mt-1">94.8%</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Cairo Risk Dept
+        </span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed-dim/20 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">credit_score</span>
+</div>
+</div>
+</section>
+<!-- 5-COLUMN KANBAN LANES -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-space-md items-start">
+<!-- LANE 1: LEAD / QUALIFICATION -->
+<div class="bg-surface-container/50 backdrop-blur-2xl rounded-2xl p-space-sm flex flex-col gap-space-sm shadow-xl min-h-[700px]">
+<!-- Column Indicator & Header -->
+<div class="bg-surface-container-high/80 rounded-xl p-3 flex flex-col gap-2 shadow-sm">
+<div class="h-1.5 w-full bg-primary rounded-full"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">1. Lead / Qual.</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-primary/20 text-primary">8</span>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Value</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">EGP 7,200,000</span>
+</div>
+</div>
+<!-- Cards Container -->
+<div class="flex flex-col gap-space-sm overflow-y-auto">
+<!-- CARD: Spinneys Egypt -->
+<article class="bg-surface-container-highest/60 hover:bg-surface-container-highest/90 backdrop-blur-xl rounded-xl p-3.5 shadow-md hover:shadow-xl transition-all cursor-grab active:cursor-grabbing group">
+<!-- Top Row: Customer & Dots Menu -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold font-title-md shrink-0 shadow-inner">
+                SP
+              </div>
+<div class="min-w-0">
+<span class="block font-title-md text-title-md font-bold text-on-surface truncate group-hover:text-secondary transition-colors">Spinneys Egypt</span>
+<span class="block font-label-sm text-label-sm text-outline truncate">Beverage Retail Chain</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+<!-- Deal Title -->
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-2 line-clamp-2">
+            Q4 Beverage Distribution Expansion - Greater Cairo
+          </p>
+<!-- Deal Value & Probability Gauge -->
+<div class="mt-3.5 pt-3 bg-surface-container-high/40 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Value</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">EGP 1,850,000</span>
+</div>
+<!-- Circular Probability Indicator (20%) -->
+<div class="flex items-center gap-1.5" title="Win Probability: 20%">
+<div class="relative w-8 h-8 flex items-center justify-center">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-primary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="20, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-[10px] font-bold text-primary">20%</span>
+</div>
+</div>
+</div>
+<!-- Card Metadata & Rep Info Footer -->
+<div class="mt-3 pt-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Professional corporate headshot of sales representative Mostafa Karim smiling with soft studio lighting and dark navy backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOOtXE5Ah5qgNJg5N98R8GtFBby2K9RWR3jqJeGybKjklw1DRH628--3__x878wTMnv43nydFTRHcCn6fZCp2QhFlVKaydIbP2W0T2QknSKFeCxL1GdEnxHnNlAC7uwWeuPpMA-1h1W8pfdqs4w1DFmqKgVmYnh9N4bukd2VfnRA2XOBbka-Ao6-xCd8rRhW9VhQbEtWEyOmF80KJVJBJULqQP2BNq0Ab2nyLi8B4"/>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Mostafa Karim</span>
+</div>
+<!-- Activity Badge -->
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-secondary shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active 2d ago
+            </span>
+</div>
+</article>
+<!-- CARD: Awlad Ragab -->
+<article class="bg-surface-container-highest/60 hover:bg-surface-container-highest/90 backdrop-blur-xl rounded-xl p-3.5 shadow-md hover:shadow-xl transition-all cursor-grab active:cursor-grabbing group">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold font-title-md shrink-0 shadow-inner">
+                AR
+              </div>
+<div class="min-w-0">
+<span class="block font-title-md text-title-md font-bold text-on-surface truncate group-hover:text-secondary transition-colors">Awlad Ragab</span>
+<span class="block font-label-sm text-label-sm text-outline truncate">Supermarket Chain</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-2 line-clamp-2">
+            Packaged Grains Tender &amp; Staples Reorder
+          </p>
+<div class="mt-3.5 pt-3 bg-surface-container-high/40 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Value</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">EGP 950,000</span>
+</div>
+<!-- Circular Probability Indicator (25%) -->
+<div class="flex items-center gap-1.5" title="Win Probability: 25%">
+<div class="relative w-8 h-8 flex items-center justify-center">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-primary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="25, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-[10px] font-bold text-primary">25%</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait of female account manager Sarah Nour wearing formal blazer in professional corporate setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWK3ivcFGL3qr2c6gEK1r2o4tzoHaRQ2OGZCVyi7FHAb5Ub_Z77nVUshoWAr6mJpAeLV_rCUvm4kpyhf1LmILLVt0hn1Ogt_EtdbevSafRdxiXUpXy5BeF6WHzDsLxbBDdW6TJltGKkCukXPaCXeMqtJypRYHt9tLtDWnPN233MznZk2akdVVd_gCRxMgJPSe_HJphD9bk0SnMleA2hy5OSaLrmi2o0SOBhiPWT2w"/>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Sarah Nour</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 4d in stage
+            </span>
+</div>
+</article>
+<!-- Placeholder card indicator for more items -->
+<div class="bg-surface-container-high/30 rounded-xl p-2.5 flex items-center justify-center text-outline hover:text-on-surface cursor-pointer transition-colors">
+<span class="font-label-sm text-label-sm">+ 6 additional leads in queue</span>
+</div>
+</div>
+</div>
+<!-- LANE 2: PROPOSAL / QUOTATION SENT -->
+<div class="bg-surface-container/50 backdrop-blur-2xl rounded-2xl p-space-sm flex flex-col gap-space-sm shadow-xl min-h-[700px]">
+<div class="bg-surface-container-high/80 rounded-xl p-3 flex flex-col gap-2 shadow-sm">
+<div class="h-1.5 w-full bg-secondary rounded-full"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">2. Proposal Sent</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-secondary/20 text-secondary">11</span>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Value</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">EGP 14,800,000</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm overflow-y-auto">
+<!-- CARD: Carrefour Maadi Hub -->
+<article class="bg-surface-container-highest/60 hover:bg-surface-container-highest/90 backdrop-blur-xl rounded-xl p-3.5 shadow-md hover:shadow-xl transition-all cursor-grab active:cursor-grabbing group">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary font-bold font-title-md shrink-0 shadow-inner">
+                CF
+              </div>
+<div class="min-w-0">
+<span class="block font-title-md text-title-md font-bold text-on-surface truncate group-hover:text-secondary transition-colors">Carrefour Maadi Hub</span>
+<span class="block font-label-sm text-label-sm text-outline truncate">Hypermarket Logistics</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-2 line-clamp-2">
+            Monthly Dairy &amp; Juice Supply - Multi-Store Replenishment
+          </p>
+<!-- Quote Code & Status Pill -->
+<div class="mt-2 flex flex-wrap items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface font-mono">
+<span class="material-symbols-outlined text-[13px] text-secondary">request_quote</span> #QT-2024-0891
+            </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-secondary-container/30 text-secondary font-semibold">
+              Discount approved
+            </span>
+</div>
+<div class="mt-3 bg-surface-container-high/40 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Value</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">EGP 3,400,000</span>
+</div>
+<!-- Probability (50%) -->
+<div class="relative w-8 h-8 flex items-center justify-center" title="Win Probability: 50%">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="50, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-[10px] font-bold text-secondary">50%</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait of senior sales consultant Ahmed Zaki in modern office environment with blurred glass partitions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwSJHml7sewdHkRlllyOWJzBhH9HiiZcfuWk7nVLf8Cs7wOqTsom41x2u0TWu8gU8wKGhe-ve0YHD4lh2Yn1fEwN7erzKUF7guBennazvLpUu_BGCsqPnHmacucZPH7nedE1RQcDblO1xXU79lYDcgrKD6oMB2tjdylbVHTjHRO9vy02sQAu1G77NtVznUmECqpmDErUGrx1yEVpwtubnwAE3dXX3hyx1j0LmQG48"/>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Ahmed Zaki</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 3d in stage
+            </span>
+</div>
+</article>
+<!-- CARD: Seoudi Gourmet -->
+<article class="bg-surface-container-highest/60 hover:bg-surface-container-highest/90 backdrop-blur-xl rounded-xl p-3.5 shadow-md hover:shadow-xl transition-all cursor-grab active:cursor-grabbing group">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary font-bold font-title-md shrink-0 shadow-inner">
+                SG
+              </div>
+<div class="min-w-0">
+<span class="block font-title-md text-title-md font-bold text-on-surface truncate group-hover:text-secondary transition-colors">Seoudi Gourmet</span>
+<span class="block font-label-sm text-label-sm text-outline truncate">Premium Delicatessen</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-2 line-clamp-2">
+            Premium Imported Sauces &amp; Condiments Lineup
+          </p>
+<div class="mt-3.5 bg-surface-container-high/40 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Value</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">EGP 2,100,000</span>
+</div>
+<!-- Probability (60%) -->
+<div class="relative w-8 h-8 flex items-center justify-center" title="Win Probability: 60%">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="60, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-[10px] font-bold text-secondary">60%</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Headshot of key account executive Dina Adel with pleasant professional expression against dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQrEvmY5C8yGxq_xcvowlExZb5lA-qONgPACbZdGBNy-SrAbA5_xWfIidObyg_LdGc9xQ_0GmhZu09qDQB60dyGgPIZTrjAM1kKIkTLUI2t7_9zdNHmIHbt7eivOJeToo6JcdV6uqKXehtY4DU9s3Cm9aEIw6hY9AFfSljoZWgI4rzNeEJXR7QH3451lfFuAXDEi4zOE0vptz7E_UKd3GcvC0gr8qA1lkR1yr6jOA"/>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Dina Adel</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 6d in stage
+            </span>
+</div>
+</article>
+<!-- More in lane indicator -->
+<div class="bg-surface-container-high/30 rounded-xl p-2.5 flex items-center justify-center text-outline hover:text-on-surface cursor-pointer transition-colors">
+<span class="font-label-sm text-label-sm">+ 9 active proposals awaiting signoff</span>
+</div>
+</div>
+</div>
+<!-- LANE 3: NEGOTIATION & CREDIT REVIEW -->
+<div class="bg-surface-container/50 backdrop-blur-2xl rounded-2xl p-space-sm flex flex-col gap-space-sm shadow-xl min-h-[700px]">
+<div class="bg-surface-container-high/80 rounded-xl p-3 flex flex-col gap-2 shadow-sm">
+<div class="h-1.5 w-full bg-secondary-container rounded-full"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">3. Negotiation</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-secondary-container/20 text-secondary">9</span>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Value</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">EGP 16,400,000</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm overflow-y-auto">
+<!-- CARD: Kazyon Discount Stores -->
+<article class="bg-surface-container-highest/60 hover:bg-surface-container-highest/90 backdrop-blur-xl rounded-xl p-3.5 shadow-md hover:shadow-xl transition-all cursor-grab active:cursor-grabbing group">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary font-bold font-title-md shrink-0 shadow-inner">
+                KZ
+              </div>
+<div class="min-w-0">
+<span class="block font-title-md text-title-md font-bold text-on-surface truncate group-hover:text-secondary transition-colors">Kazyon Discount Stores</span>
+<span class="block font-label-sm text-label-sm text-outline truncate">Hard-Discount FMCG Chain</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-2 line-clamp-2">
+            Cairo 40-Branch Bulk Supply Contract (Edible Oils &amp; Flours)
+          </p>
+<!-- Critical status badge -->
+<div class="mt-2">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span> Credit Limit Approved 8M EGP
+            </span>
+</div>
+<div class="mt-3 bg-surface-container-high/40 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Value</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">EGP 6,800,000</span>
+</div>
+<!-- Probability (75%) -->
+<div class="relative w-8 h-8 flex items-center justify-center" title="Win Probability: 75%">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-[10px] font-bold text-secondary">75%</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Professional corporate headshot of sales representative Mostafa Karim smiling with soft studio lighting and dark navy backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9KDpoimG-CRTaO_HJwXK1iuyc0EF0_2YOVZ1Pox-sCu3pulC1H7gwlHss21w2HxCf1KPuaNlJZyXi7CU6fHWZp9zkXAky39HqT74-FMxY1F-dX_G8tOpFlBVVFpJUP2EY_OdAzNs5_i0K8ORakvRPNhinEd2KkCV8Q4KjaOFJQiCoNECvXfFi-n50ocG-IDsem8Hv3VP04N_TxFw13hWDm-zKIq5jaEPV5JX_d6s"/>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Mostafa Karim</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 1d in stage
+            </span>
+</div>
+</article>
+<!-- CARD: Fathalla Alexandria -->
+<article class="bg-surface-container-highest/60 hover:bg-surface-container-highest/90 backdrop-blur-xl rounded-xl p-3.5 shadow-md hover:shadow-xl transition-all cursor-grab active:cursor-grabbing group">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary font-bold font-title-md shrink-0 shadow-inner">
+                FA
+              </div>
+<div class="min-w-0">
+<span class="block font-title-md text-title-md font-bold text-on-surface truncate group-hover:text-secondary transition-colors">Fathalla Alexandria</span>
+<span class="block font-label-sm text-label-sm text-outline truncate">Coastal Regional Depot</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-2 line-clamp-2">
+            Central Depots - Q4 Frozen Foods &amp; Packaged Goods
+          </p>
+<div class="mt-3.5 bg-surface-container-high/40 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Value</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">EGP 4,200,000</span>
+</div>
+<!-- Probability (70%) -->
+<div class="relative w-8 h-8 flex items-center justify-center" title="Win Probability: 70%">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="70, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-[10px] font-bold text-secondary">70%</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait of operations account lead Tamer Youssef in clean modern corporate office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS_D2UxrPNCFi_FTUI8M4FJUu-_9wDPfRt2USQ8wytcZ7j7oBh5xj6e7_q5JS9sFreTd5GOI97wcLYJ8oEy4qvGQKFR_U0AxSvLzfPU39flP1nrMAVO04AHI2ONEoK5rvCYSO7klNm8W9I3MW91XGSghX4XtJrPnuX4CH7_23-c8l5eUSxS6CnQDYYcVp7hmQNa-9ONkprs_DtEejky4Y8wJ16C-6RBT6HHfaW4rA"/>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Tamer Youssef</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 5d in stage
+            </span>
+</div>
+</article>
+<div class="bg-surface-container-high/30 rounded-xl p-2.5 flex items-center justify-center text-outline hover:text-on-surface cursor-pointer transition-colors">
+<span class="font-label-sm text-label-sm">+ 7 under active terms discussion</span>
+</div>
+</div>
+</div>
+<!-- LANE 4: SUPERVISOR APPROVAL -->
+<div class="bg-surface-container/50 backdrop-blur-2xl rounded-2xl p-space-sm flex flex-col gap-space-sm shadow-xl min-h-[700px]">
+<div class="bg-surface-container-high/80 rounded-xl p-3 flex flex-col gap-2 shadow-sm">
+<div class="h-1.5 w-full bg-secondary-fixed rounded-full"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">4. Supervisor Signoff</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-secondary/20 text-secondary">4</span>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Value</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">EGP 6,250,000</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm overflow-y-auto">
+<!-- CARD: Hyperone Sheikh Zayed -->
+<article class="bg-surface-container-highest/60 hover:bg-surface-container-highest/90 backdrop-blur-xl rounded-xl p-3.5 shadow-md hover:shadow-xl transition-all cursor-grab active:cursor-grabbing group">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary font-bold font-title-md shrink-0 shadow-inner">
+                HO
+              </div>
+<div class="min-w-0">
+<span class="block font-title-md text-title-md font-bold text-on-surface truncate group-hover:text-secondary transition-colors">Hyperone Zayed</span>
+<span class="block font-label-sm text-label-sm text-outline truncate">Flagship Mega Mall</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-2 line-clamp-2">
+            Annual Confectionery &amp; Sweet Snacks Exclusive Supply Contract
+          </p>
+<!-- Supervisor Action Alert Badge -->
+<div class="mt-2.5">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">approval</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Pending Supervisor Signoff</span>
+</div>
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-secondary text-on-secondary hover:brightness-110 active:scale-95 transition-all">
+                Review
+              </button>
+</div>
+</div>
+<div class="mt-3 bg-surface-container-high/40 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Value</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">EGP 3,850,000</span>
+</div>
+<!-- Probability (90%) -->
+<div class="relative w-8 h-8 flex items-center justify-center" title="Win Probability: 90%">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="90, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-[10px] font-bold text-secondary">90%</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait of female account manager Sarah Nour wearing formal blazer in professional corporate setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnYlnBjtx9TRnb3f7UwbSb13Hew3UGvUZN69cNlMOu6JkpYtsZbWFDuJvZYQsnhh1aIy2wExyIkHAceMR47j72JCEwVBuVRpGFPuYzW00j5G3-M-z-9D7iQFQgo6wSSfDySnFj-Jw5iFj9qzXSIKA_zwbiaCjNEJFJG7u1KMC-tfZwPiib2Nb60vvoaEkdhaP7QiG0Eo-oOJcwCuGsT05Iec5FZJKZbDdk0GdyRng"/>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Sarah Nour</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 1d in stage
+            </span>
+</div>
+</article>
+<div class="bg-surface-container-high/30 rounded-xl p-2.5 flex items-center justify-center text-outline hover:text-on-surface cursor-pointer transition-colors">
+<span class="font-label-sm text-label-sm">+ 3 queued for final authorization</span>
+</div>
+</div>
+</div>
+<!-- LANE 5: CLOSED WON -->
+<div class="bg-surface-container/50 backdrop-blur-2xl rounded-2xl p-space-sm flex flex-col gap-space-sm shadow-xl min-h-[700px]">
+<div class="bg-surface-container-high/80 rounded-xl p-3 flex flex-col gap-2 shadow-sm">
+<div class="h-1.5 w-full bg-secondary-fixed-dim rounded-full"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">5. Closed Won</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-secondary/20 text-secondary">6</span>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Value</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">EGP 4,000,000</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm overflow-y-auto">
+<!-- CARD: Metro Market Zamalek -->
+<article class="bg-surface-container-highest/60 hover:bg-surface-container-highest/90 backdrop-blur-xl rounded-xl p-3.5 shadow-md hover:shadow-xl transition-all cursor-grab active:cursor-grabbing group">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary font-bold font-title-md shrink-0 shadow-inner">
+                MM
+              </div>
+<div class="min-w-0">
+<span class="block font-title-md text-title-md font-bold text-on-surface truncate group-hover:text-secondary transition-colors">Metro Market Zamalek</span>
+<span class="block font-label-sm text-label-sm text-outline truncate">Urban Premium Grocer</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-2 line-clamp-2">
+            Beverage Re-stock &amp; Q4 Shelf Space Agreement
+          </p>
+<!-- Converted SO Badge -->
+<div class="mt-2.5 flex items-center justify-between p-2 rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">task_alt</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">SO-2024-1102</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">Dispatched</span>
+</div>
+<div class="mt-3 bg-surface-container-high/40 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Value</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">EGP 1,600,000</span>
+</div>
+<!-- Complete Ring (100%) -->
+<div class="relative w-8 h-8 flex items-center justify-center" title="Won 100%">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="100, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="material-symbols-outlined text-[14px] text-secondary absolute">check</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Portrait of senior sales consultant Ahmed Zaki in modern office environment with blurred glass partitions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0-0AtWs8C1md2SpsXa2mU1xGNtae9ODBFjUhZsyjRBqfpBAHKuYwDrOioxfQW-bhAZMDcqzjyJwWwBN8ldjV3H2mCR5az7tKiWPqbJ8OpdSmMtrnruDG7vpcJCtLDIYxvvhMpdwN8PgrMbPeLQYcMmUUrvJXhixPqzPMhf720kzVadWtZ1XeX-jYMRJup9vlE2wy6KtbdmLS0HouFcFDuaimqPH3tXPVfzsDwGFc"/>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Ahmed Zaki</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-secondary font-medium">
+              Completed Today
+            </span>
+</div>
+</article>
+<!-- Additional Closed Won Deal -->
+<article class="bg-surface-container-highest/60 hover:bg-surface-container-highest/90 backdrop-blur-xl rounded-xl p-3.5 shadow-md hover:shadow-xl transition-all cursor-grab active:cursor-grabbing group">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary font-bold font-title-md shrink-0 shadow-inner">
+                OS
+              </div>
+<div class="min-w-0">
+<span class="block font-title-md text-title-md font-bold text-on-surface truncate group-hover:text-secondary transition-colors">On the Run (Exxon)</span>
+<span class="block font-label-sm text-label-sm text-outline truncate">Convenience Network</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-2 line-clamp-2">
+            On-The-Go Snacks Quick Restock Batch #4
+          </p>
+<div class="mt-2.5 flex items-center justify-between p-2 rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">task_alt</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">SO-2024-1088</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">Invoiced</span>
+</div>
+<div class="mt-3 bg-surface-container-high/40 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Value</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">EGP 2,400,000</span>
+</div>
+<div class="relative w-8 h-8 flex items-center justify-center">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="100, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="material-symbols-outlined text-[14px] text-secondary absolute">check</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<img class="w-5 h-5 rounded-full object-cover shrink-0" data-alt="Headshot of key account executive Dina Adel with pleasant professional expression against dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcS3eO7MLAhSZbbQP8aWvwndknStpbk3ktLlUIHwhCd86ywD9p0vBNgQSBR3JcTXWa6BDWNYMz4pAhb7piPZW1uQzCFCSznREsxDFgxBEUcvx54heDI-KLeh4BomZwJ7dsz8A2IZnJ6xozT6Qfq7foegrMq6HCCul-tHObT5cl2Q_mzFeGaBnP5qZN0cyW8TF6Gi9MrrUBVgG_kT5gPLNBaGqMT4-rDpZIwXLcMaA"/>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Dina Adel</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Converted 1d
+            </span>
+</div>
+</article>
+<div class="bg-surface-container-high/30 rounded-xl p-2.5 flex items-center justify-center text-outline hover:text-on-surface cursor-pointer transition-colors">
+<span class="font-label-sm text-label-sm">+ 4 deals successfully fulfilled</span>
+</div>
+</div>
+</div>
+</section>
+</div></div></main></div></body></html>

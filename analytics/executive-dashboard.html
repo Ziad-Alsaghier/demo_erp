@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#00142a", "background": "#00142a", "error-container": "#93000a", "on-secondary-fixed-variant": "#004d67", "on-tertiary-fixed": "#001a42", "on-primary-fixed": "#001d32", "outline-variant": "#3f4851", "surface-container-lowest": "#000f21", "on-error-container": "#ffdad6", "on-surface-variant": "#bfc7d3", "inverse-surface": "#d2e4ff", "secondary": "#76d1ff", "primary-fixed-dim": "#94ccff", "secondary-fixed": "#c2e8ff", "outline": "#89929c", "on-tertiary": "#122f60", "tertiary": "#aec6ff", "surface-dim": "#00142a", "error": "#ffb4ab", "secondary-container": "#0a9ccd", "surface-container": "#0a2038", "on-tertiary-container": "#0d2b5c", "tertiary-container": "#7b94cb", "on-tertiary-fixed-variant": "#2c4678", "inverse-on-surface": "#1d3149", "surface-container-highest": "#22364e", "tertiary-fixed": "#d8e2ff", "on-surface": "#d2e4ff", "on-error": "#690005", "primary": "#94ccff", "on-background": "#d2e4ff", "surface-container-low": "#061c33", "on-primary-fixed-variant": "#004b74", "on-secondary-container": "#002e3f", "surface-tint": "#94ccff", "primary-container": "#1e9be8", "on-primary-container": "#002f4c", "surface-bright": "#273a53", "surface-variant": "#22364e", "on-primary": "#003352", "secondary-fixed-dim": "#76d1ff", "on-secondary": "#003548", "inverse-primary": "#006399", "primary-fixed": "#cde5ff", "on-secondary-fixed": "#001e2b", "surface-container-high": "#162b43", "tertiary-fixed-dim": "#aec6ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-md": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "numeric-metric": ["Inter"], "body-lg": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "title-md": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "numeric-metric": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script>
+  <link rel="stylesheet" href="../assets/css/design-system.css"/>
+  <script src="../assets/js/translations.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/nav-shell.js"></script>
+</head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary-fixed"><aside class="fixed left-0 top-0 h-full w-[264px] bg-[#00142a]/95 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)]">
+  <div class="flex flex-col h-full overflow-hidden">
+    <div class="h-[72px] px-space-lg flex items-center justify-between border-b border-white/10">
+      <a href="../analytics/executive-dashboard.html" class="flex items-center gap-space-sm group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-secondary via-primary-container to-primary flex items-center justify-center shadow-lg shadow-primary-container/30">
+          <span class="material-symbols-outlined text-surface font-bold text-[20px]">hub</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-md text-[18px] font-bold tracking-tight text-on-surface group-hover:text-secondary transition-colors">Wise ERP</span>
+          <span class="font-label-sm text-[10px] text-secondary uppercase tracking-widest" data-i18n="brand_subtitle">Distribution Egypt</span>
+        </div>
+      </a>
+      <a href="../index.html" class="text-on-surface-variant hover:text-secondary p-1.5 rounded-lg transition-colors" title="Showcase Portal">
+        <span class="material-symbols-outlined text-[18px]">apps</span>
+      </a>
+    </div>
+
+    <div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md">
+      <nav class="space-y-1">
+        <!-- Analytics -->
+        <div class="px-space-sm pt-2 pb-1 font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold" data-i18n="nav_analytics">Analytics</div>
+        <a aria-current="page" class="flex items-center gap-3 px-3 py-2 rounded-lg transition-all bg-gradient-to-r from-secondary/20 to-primary-container/10 text-secondary border-l-2 border-secondary font-semibold shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]" data-path="executive-dashboard" href="../analytics/executive-dashboard.html">
+          <span class="material-symbols-outlined text-[18px]">monitoring</span>
+          <span data-i18n="nav_executive_dashboard">Executive Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reports-center" href="../analytics/reports-center.html">
+          <span class="material-symbols-outlined text-[18px]">summarize</span>
+          <span data-i18n="nav_reports_center">Reports Center</span>
+        </a>
+
+        <!-- Operations -->
+        <div class="px-space-sm pt-4 pb-1 font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold" data-i18n="nav_operations">Operations &amp; Logistics</div>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="products-catalog" href="../operations/products-catalog.html">
+          <span class="material-symbols-outlined text-[18px]">category</span>
+          <span data-i18n="nav_product_catalog">Product Catalog &amp; Prices</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stock-availability" href="../operations/stock-availability.html">
+          <span class="material-symbols-outlined text-[18px]">warehouse</span>
+          <span data-i18n="nav_inventory_stock">Stock on Hand &amp; Availability</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="goods-receipts-grn" href="../operations/goods-receipts-grn.html">
+          <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+          <span data-i18n="nav_grn_receipts">Goods Receipts (GRN)</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="inter-warehouse-transfers" href="../operations/inter-warehouse-transfers.html">
+          <span class="material-symbols-outlined text-[18px]">move_up</span>
+          <span data-i18n="nav_transfers">Inter-Warehouse Transfers</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="barcode-shelf-labels" href="../operations/barcode-shelf-labels.html">
+          <span class="material-symbols-outlined text-[18px]">barcode_scanner</span>
+          <span data-i18n="nav_barcode_labels">Barcode &amp; Shelf Labels</span>
+        </a>
+
+        <!-- Sales & CRM -->
+        <div class="px-space-sm pt-4 pb-1 font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold" data-i18n="nav_sales">Sales &amp; CRM</div>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sales-pipeline-kanban" href="../sales/sales-pipeline-kanban.html">
+          <span class="material-symbols-outlined text-[18px]">view_kanban</span>
+          <span data-i18n="nav_pipeline_kanban">Pipeline &amp; Kanban</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sales-quotation" href="../sales/sales-quotation.html">
+          <span class="material-symbols-outlined text-[18px]">request_quote</span>
+          <span data-i18n="nav_quotations">Sales Quotations</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customer-360" href="../sales/customer-360.html">
+          <span class="material-symbols-outlined text-[18px]">contacts</span>
+          <span data-i18n="nav_customer_360">Customer 360</span>
+        </a>
+
+        <!-- Finance -->
+        <div class="px-space-sm pt-4 pb-1 font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold" data-i18n="nav_finance">Finance &amp; Accounting</div>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="chart-of-accounts" href="../finance/chart-of-accounts.html">
+          <span class="material-symbols-outlined text-[18px]">table_chart</span>
+          <span data-i18n="nav_chart_of_accounts">Chart of Accounts</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="journal-entries" href="../finance/journal-entries.html">
+          <span class="material-symbols-outlined text-[18px]">menu_book</span>
+          <span data-i18n="nav_journal_entries">Journal Entries</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="treasury-cheques" href="../finance/treasury-cheques.html">
+          <span class="material-symbols-outlined text-[18px]">savings</span>
+          <span data-i18n="nav_treasury_cheques">Treasury &amp; Cheques</span>
+        </a>
+
+        <!-- People -->
+        <div class="px-space-sm pt-4 pb-1 font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold" data-i18n="nav_people">People &amp; HR</div>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="daily-attendance-board" href="../hr/daily-attendance-board.html">
+          <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+          <span data-i18n="nav_attendance_board">HR Attendance Board</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-attendance-mobile" href="../hr/my-attendance-mobile.html">
+          <span class="material-symbols-outlined text-[18px]">smartphone</span>
+          <span data-i18n="nav_my_attendance">My Attendance (Mobile)</span>
+        </a>
+
+        <!-- Security -->
+        <div class="px-space-sm pt-4 pb-1 font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold" data-i18n="nav_administration">Administration &amp; Security</div>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="security-permission-matrix" href="../security/security-permission-matrix.html">
+          <span class="material-symbols-outlined text-[18px]">security</span>
+          <span data-i18n="nav_security_permissions">Security Permissions</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="field-level-rules" href="../security/field-level-rules.html">
+          <span class="material-symbols-outlined text-[18px]">vpn_key</span>
+          <span data-i18n="nav_field_rules">Field Rules &amp; Masking</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bottom Status Card -->
+    <div class="p-space-md border-t border-white/10 bg-surface-container-low/70 backdrop-blur-md flex flex-col gap-space-xs">
+      <div class="flex items-center justify-between">
+        <span class="font-label-sm text-[12px] text-on-surface-variant flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[14px] text-secondary">hub</span>
+          <span data-i18n="cairo_central">Cairo Central Terminal</span>
+        </span>
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+      </div>
+      <div class="flex items-center justify-between text-on-surface-variant">
+        <span class="font-label-sm text-[11px] text-secondary-fixed" data-i18n="live_cloud_sync">Live Cloud Sync Active</span>
+        <a href="../index.html" class="material-symbols-outlined text-[16px] text-outline hover:text-secondary cursor-pointer" title="Back to Portal Hub">home</a>
+      </div>
+    </div>
+  </div>
+</aside><div class="pl-[264px]"><header class="fixed top-0 left-[264px] right-0 h-[72px] z-40 bg-[#00142a]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] px-space-lg flex items-center justify-between gap-space-md">
+  <!-- Breadcrumb -->
+  <div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+    <a href="../index.html" class="flex items-center text-secondary hover:text-on-surface transition-colors" title="Demo Home">
+      <span class="material-symbols-outlined text-[18px]">home</span>
+    </a>
+    <span class="text-outline">/</span>
+    <span class="text-outline hover:text-on-surface cursor-pointer" data-i18n="brand_name">Wise ERP</span>
+    <span class="text-outline">/</span>
+    <span class="text-on-surface font-semibold" data-i18n="nav_executive_dashboard">Executive Dashboard</span>
+  </div>
+
+  <!-- Search Input with Command Palette Trigger (Ctrl+K) -->
+  <div class="flex-1 max-w-xl mx-space-md">
+    <div class="relative flex items-center w-full header-search-wrap cursor-pointer" data-action="open-cmd">
+      <span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span>
+      <input class="w-full pl-10 pr-12 py-2 bg-[#04122b]/80 border border-white/15 rounded-lg text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:border-secondary transition-all cursor-pointer" placeholder="Search customers, products, documents, employees, deals (Ctrl+K)..." data-i18n-placeholder="search_placeholder" readonly type="text"/>
+      <span class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container-high border border-white/10 font-label-sm text-label-sm text-on-surface-variant">⌘K</span>
+    </div>
+  </div>
+
+  <!-- Right Actions: Hub, Language, Date, Notif, Create, Profile -->
+  <div class="flex items-center gap-space-sm">
+    <!-- Hub Selector -->
+    <div class="relative">
+      <select class="appearance-none bg-surface-container-high/60 border border-white/15 text-on-surface font-body-sm text-body-sm rounded-lg pl-3 pr-8 py-1.5 hover:bg-surface-container-highest cursor-pointer focus:outline-none focus:border-secondary">
+        <option>Cairo HQ &amp; Central Hub</option>
+        <option>Alexandria Coastal Hub</option>
+        <option>Giza Fulfillment</option>
+        <option>Delta Mansoura</option>
+      </select>
+      <span class="material-symbols-outlined absolute right-2 top-2 pointer-events-none text-outline text-[18px]">expand_more</span>
+    </div>
+
+    <!-- Bilingual Switcher -->
+    <div class="flex items-center border border-white/15 rounded-lg p-0.5 bg-surface-container-high/40">
+      <button data-lang-btn="en" class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-container transition-all">EN</button>
+      <button data-lang-btn="ar" class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all">ع</button>
+    </div>
+
+    <!-- Date Pill -->
+    <div class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/15 bg-surface-container-high/40 font-body-sm text-body-sm text-on-surface-variant">
+      <span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+      <span>Q4 2024 · Active Fiscal</span>
+    </div>
+
+    <!-- Notifications Bell -->
+    <div class="relative">
+      <button onclick="WiseERP.showToast({ title: 'System Notifications', message: '5 operational alerts: 2 Low stock warnings, 1 Pending GRN voucher, 2 Shift approvals.', type: 'info' })" class="p-2 rounded-lg border border-white/15 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Notifications">
+        <span class="material-symbols-outlined text-[20px]">notifications</span>
+      </button>
+      <span class="notif-badge absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full font-label-sm text-[10px] bg-secondary text-on-secondary font-bold shadow-[0_0_10px_rgba(118,209,255,0.6)]">5</span>
+    </div>
+
+    <!-- Quick Action / Create Button -->
+    <a href="../sales/sales-quotation.html" class="flex items-center gap-1 px-3 py-1.5 rounded-lg font-body-sm text-body-sm font-semibold text-white bg-gradient-to-r from-secondary via-primary-container to-inverse-primary border border-white/30 shadow-[0_8px_24px_rgba(30,155,232,0.4)] hover:brightness-110 active:scale-95 transition-all">
+      <span class="material-symbols-outlined text-[18px]">add</span>
+      <span data-i18n="create_new">Create</span>
+    </a>
+
+    <div class="h-6 w-px bg-white/15 mx-1"></div>
+
+    <!-- User Profile with Logout -->
+    <a href="../auth/corporate-sso-login.html" title="Sign Out to SSO Login" class="flex items-center gap-3 pl-1 group hover:opacity-90 transition-opacity">
+      <div class="flex flex-col text-right">
+        <div class="flex items-center gap-1.5 justify-end">
+          <span class="font-title-md text-title-md font-semibold text-on-surface group-hover:text-secondary transition-colors">Tarek El-Sayed</span>
+          <span class="px-1.5 py-0.5 rounded-full font-label-sm text-[10px] font-bold bg-primary-container/20 text-secondary border border-secondary/30">Super Admin</span>
+        </div>
+        <span class="font-label-sm text-label-sm text-outline">Scope: All Hubs</span>
+      </div>
+      <img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-secondary/40 shadow-[0_0_12px_rgba(91,203,255,0.2)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCultRCtgMRciVnK51-F0eUsLbvHS18gsIaQOxtHuKNKgGK7VdoAcDl4WgDbSh4XJ91VDiO50qXeDlh2vOYWYtqIlueYzfKqwUrqKJTHj0hymeNiiU-85wfsCNq8hfjNvNmvg1bEXYoxNnei7URQsxx59IdhDLKU2LngBC4FB7aOhLbBQMr216iGCzBul8s67Wl_IOkppRPIUtFFNEIsNY2a6XrqPz5ia7nCatKUCw"/>
+    </a>
+  </div>
+</header><main class="relative pt-[72px] min-h-screen bg-surface"><div class="fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#1E9BE8]/25 blur-[120px]"></div><div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-[#5BCBFF]/18 blur-[120px]"></div></div><div class="relative z-10 w-full max-w-[1600px] mx-auto p-space-xl"><div class="flex flex-col w-full space-y-space-xl">
+<!-- Top Executive Overview Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-secondary/10 text-secondary border border-secondary/20 shadow-[0_0_12px_rgba(118,209,255,0.15)]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Consolidated Telematics
+        </span>
+<span class="font-body-sm text-body-sm text-outline">Real-time sync: 2 mins ago</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl font-bold tracking-tight text-on-surface">
+        Operational &amp; Financial Command
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Multi-hub distribution analytics across Cairo, Alexandria, Giza, and Delta territories.
+      </p>
+</div>
+<!-- Quick Action / Preset Filters -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="flex items-center p-1 rounded-xl bg-surface-container-high/60 backdrop-blur-md border border-white/10 shadow-inner">
+<button class="px-3 py-1 rounded-lg font-label-md text-label-md font-semibold bg-secondary-container text-on-secondary-container shadow-sm transition-all" id="btn-curr-egp">EGP</button>
+<button class="px-3 py-1 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="btn-curr-usd">USD</button>
+</div>
+<div class="relative inline-block text-left">
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container/70 hover:bg-surface-container-high/80 border border-white/15 text-on-surface font-body-sm text-body-sm backdrop-blur-xl shadow-[0_4px_20px_rgba(0,15,33,0.4)] transition-all">
+<span class="material-symbols-outlined text-secondary text-[18px]">tune</span>
+<span>All Warehouses (6)</span>
+<span class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+</button>
+</div>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-secondary/20 to-primary-container/20 hover:from-secondary/30 hover:to-primary-container/30 border border-secondary/30 text-secondary font-label-md text-label-md font-semibold backdrop-blur-xl transition-all shadow-[0_0_15px_rgba(118,209,255,0.15)] active:scale-95">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Deck</span>
+</button>
+</div>
+</div>
+<!-- 1. Top Executive KPI Row (4 Glass Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<!-- KPI 1: Revenue -->
+<div class="group relative overflow-hidden rounded-[20px] bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-[24px] border border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] p-space-lg flex flex-col justify-between transition-all duration-300">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-secondary/40 to-transparent"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Total Net Revenue</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-numeric-metric text-numeric-metric text-on-surface tracking-tight">84,250,920</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">EGP</span>
+</div>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>+14.8%</span>
+</div>
+</div>
+<!-- Sparkline 1: Area Cyan -->
+<div class="my-4 h-12 w-full">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 200 48">
+<defs>
+<lineargradient id="cyanSparkGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#5BCBFF" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#1E9BE8" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 0 38 Q 25 34, 50 28 T 100 24 T 150 14 T 200 6 L 200 48 L 0 48 Z" fill="url(#cyanSparkGrad)"></path>
+<path d="M 0 38 Q 25 34, 50 28 T 100 24 T 150 14 T 200 6" fill="none" stroke="#5BCBFF" stroke-linecap="round" stroke-width="2.5"></path>
+<circle class="fill-secondary shadow-[0_0_8px_#5BCBFF]" cx="200" cy="6" r="3.5"></circle>
+</svg>
+</div>
+<div class="pt-2 border-t border-white/5 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Target: 80,000,000 EGP</span>
+<span class="text-secondary font-semibold">105.3% achieved</span>
+</div>
+</div>
+<!-- KPI 2: Gross Margin % -->
+<div class="group relative overflow-hidden rounded-[20px] bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-[24px] border border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] p-space-lg flex flex-col justify-between transition-all duration-300">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#2DD4A7]/40 to-transparent"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Gross Margin</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-numeric-metric text-numeric-metric text-on-surface tracking-tight">28.4%</span>
+<span class="font-label-sm text-label-sm text-[#2DD4A7] font-semibold">Consolidated</span>
+</div>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#2DD4A7]/15 border border-[#2DD4A7]/30 text-[#2DD4A7] font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+2.1% pts</span>
+</div>
+</div>
+<!-- Sparkline 2: Bar Sparkline Teal -->
+<div class="my-4 h-12 w-full flex items-end justify-between gap-1.5 px-1">
+<div class="w-full bg-[#2DD4A7]/20 rounded-t h-[45%] group-hover:bg-[#2DD4A7]/30 transition-all"></div>
+<div class="w-full bg-[#2DD4A7]/30 rounded-t h-[55%]"></div>
+<div class="w-full bg-[#2DD4A7]/25 rounded-t h-[40%]"></div>
+<div class="w-full bg-[#2DD4A7]/40 rounded-t h-[65%]"></div>
+<div class="w-full bg-[#2DD4A7]/50 rounded-t h-[72%]"></div>
+<div class="w-full bg-[#2DD4A7]/70 rounded-t h-[84%]"></div>
+<div class="w-full bg-[#2DD4A7] rounded-t h-[95%] shadow-[0_0_8px_rgba(45,212,167,0.4)]"></div>
+</div>
+<div class="pt-2 border-t border-white/5 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>COGS Recorded</span>
+<span class="text-on-surface font-semibold">60,323,650 EGP</span>
+</div>
+</div>
+<!-- KPI 3: Cash & Treasury Balance -->
+<div class="group relative overflow-hidden rounded-[20px] bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-[24px] border border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] p-space-lg flex flex-col justify-between transition-all duration-300">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-primary-container/40 to-transparent"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Cash &amp; Treasury</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-numeric-metric text-numeric-metric text-on-surface tracking-tight">22,840,400</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">EGP</span>
+</div>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+<span>+5.4%</span>
+</div>
+</div>
+<!-- Sparkline 3: Pure Line Inflow -->
+<div class="my-4 h-12 w-full">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 200 48">
+<path d="M 0 32 L 35 36 L 70 20 L 105 26 L 140 18 L 175 22 L 200 8" fill="none" stroke="#1E9BE8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<circle class="fill-primary-container shadow-[0_0_8px_#1E9BE8]" cx="200" cy="8" r="3.5"></circle>
+</svg>
+</div>
+<div class="pt-2 border-t border-white/5 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Undeposited Cheques</span>
+<span class="text-tertiary-fixed font-semibold">4,120,000 EGP</span>
+</div>
+</div>
+<!-- KPI 4: Inventory Stock Valuation -->
+<div class="group relative overflow-hidden rounded-[20px] bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-[24px] border border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] p-space-lg flex flex-col justify-between transition-all duration-300">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-amber-400/40 to-transparent"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Inventory Valuation</span>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-numeric-metric text-numeric-metric text-on-surface tracking-tight">41,630,150</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">EGP</span>
+</div>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+<span>-3.2% Turn</span>
+</div>
+</div>
+<!-- Sparkline 4: Amber Trendline -->
+<div class="my-4 h-12 w-full">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 200 48">
+<path d="M 0 14 L 35 18 L 70 24 L 105 20 L 140 30 L 175 34 L 200 38" fill="none" stroke="#F5A524" stroke-dasharray="5 3" stroke-linecap="round" stroke-width="2.5"></path>
+<circle class="fill-[#F5A524] shadow-[0_0_8px_#F5A524]" cx="200" cy="38" r="3.5"></circle>
+</svg>
+</div>
+<div class="pt-2 border-t border-white/5 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>In-Stock Availability</span>
+<span class="text-emerald-400 font-semibold">98.4% (6 Hubs)</span>
+</div>
+</div>
+</div>
+<!-- 2. Middle Analytics Section (2-Column Grid: 8 Cols & 4 Cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: High Density Interactive Chart (8 Cols) -->
+<div class="lg:col-span-8 rounded-[20px] bg-white/[0.05] backdrop-blur-[24px] border border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] p-space-lg flex flex-col justify-between relative overflow-hidden">
+<!-- Specular top reflection -->
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+<!-- Chart Header Controls -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-6">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Revenue vs Monthly Target &amp; Forecast</h2>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary/15 text-secondary border border-secondary/20">FY2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous pipeline variance benchmarked against EGP 80.0M baseline</p>
+</div>
+<!-- Period Toggle -->
+<div class="flex items-center gap-2">
+<div class="flex p-0.5 bg-surface-container-low/80 backdrop-blur-md rounded-xl border border-white/10 text-body-sm">
+<button class="px-3 py-1 font-label-md text-label-md rounded-lg font-semibold bg-secondary text-on-secondary shadow-sm transition-all">Monthly</button>
+<button class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all">Quarterly</button>
+<button class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all">YTD</button>
+</div>
+<button class="p-1.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex flex-wrap items-center gap-6 mb-4 font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_8px_#5BCBFF]"></span>
+<span class="text-on-surface">Actual Invoiced (EGP)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-1 bg-[#1E9BE8] rounded-full border-t border-dashed border-[#5BCBFF]"></span>
+<span class="text-on-surface-variant">Pipeline Forecast (High Conviction)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-0.5 bg-amber-400 border-t border-dashed border-amber-300"></span>
+<span class="text-amber-300/90">Target Baseline (80.0M)</span>
+</div>
+</div>
+<!-- Interactive SVG Chart Area -->
+<div class="relative w-full h-72 sm:h-80 flex flex-col justify-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 900 300">
+<defs>
+<lineargradient id="mainAreaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#5BCBFF" stop-opacity="0.38"></stop>
+<stop offset="65%" stop-color="#1E9BE8" stop-opacity="0.12"></stop>
+<stop offset="100%" stop-color="#00142A" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="forecastGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#94CCFF" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#00142A" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Grid Lines -->
+<g class="stroke-white/10" stroke-dasharray="3 3" stroke-width="1">
+<line x1="0" x2="900" y1="40" y2="40"></line>
+<line x1="0" x2="900" y1="100" y2="100"></line>
+<line x1="0" x2="900" y1="160" y2="160"></line>
+<line x1="0" x2="900" y1="220" y2="220"></line>
+<line x1="0" x2="900" y1="280" y2="280"></line>
+</g>
+<!-- Baseline Reference Line: EGP 80M at y=120 -->
+<line opacity="0.85" stroke="#F5A524" stroke-dasharray="6 4" stroke-width="1.8" x1="0" x2="900" y1="120" y2="120"></line>
+<text class="fill-amber-300 font-label-sm text-[11px] font-semibold" text-anchor="end" x="895" y="114">Target EGP 80M</text>
+<!-- Actual Invoiced Path (Jan - Oct: x=0 to x=680) -->
+<path d="M 0 250
+                   C 75 240, 100 230, 150 215
+                   C 200 200, 240 210, 300 185
+                   C 360 160, 400 170, 450 145
+                   C 500 120, 540 135, 600 108
+                   C 640 90, 660 88, 680 82
+                   L 680 280 L 0 280 Z" fill="url(#mainAreaGrad)"></path>
+<path d="M 0 250
+                   C 75 240, 100 230, 150 215
+                   C 200 200, 240 210, 300 185
+                   C 360 160, 400 170, 450 145
+                   C 500 120, 540 135, 600 108
+                   C 640 90, 660 88, 680 82" fill="none" stroke="#5BCBFF" stroke-linecap="round" stroke-width="3"></path>
+<!-- Forecast Extension (Oct to Dec: x=680 to 900) -->
+<path d="M 680 82
+                   C 730 78, 770 65, 820 60
+                   C 860 55, 880 50, 900 48
+                   L 900 280 L 680 280 Z" fill="url(#forecastGrad)"></path>
+<path d="M 680 82
+                   C 730 78, 770 65, 820 60
+                   C 860 55, 880 50, 900 48" fill="none" stroke="#76D1FF" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Data Points on Actuals -->
+<circle cx="150" cy="215" fill="#00142A" r="4" stroke="#5BCBFF" stroke-width="2"></circle>
+<circle cx="300" cy="185" fill="#00142A" r="4" stroke="#5BCBFF" stroke-width="2"></circle>
+<circle cx="450" cy="145" fill="#00142A" r="4" stroke="#5BCBFF" stroke-width="2"></circle>
+<circle cx="600" cy="108" fill="#00142A" r="4" stroke="#5BCBFF" stroke-width="2"></circle>
+<circle class="shadow-[0_0_12px_#5BCBFF]" cx="680" cy="82" fill="#5BCBFF" r="6" stroke="#FFFFFF" stroke-width="2.5"></circle>
+<!-- Tooltip Marker at Oct checkpoint -->
+<g transform="translate(680, 82)">
+<rect fill="#061A3D" filter="drop-shadow(0 6px 16px rgba(0,0,0,0.5))" height="42" rx="8" stroke="#5BCBFF" stroke-width="1.2" width="130" x="-65" y="-56"></rect>
+<text class="fill-[#8FA3C0] font-label-sm text-[10px] uppercase font-semibold" text-anchor="middle" x="0" y="-38">OCT (CURRENT)</text>
+<text class="fill-white font-title-md text-[13px] font-bold" text-anchor="middle" x="0" y="-20">84,250,920 EGP</text>
+</g>
+</svg>
+<!-- X Axis Labels -->
+<div class="flex justify-between text-outline font-label-sm text-label-sm pt-2 border-t border-white/10 uppercase">
+<span>Jan</span>
+<span>Feb</span>
+<span>Mar</span>
+<span>Apr</span>
+<span>May</span>
+<span>Jun</span>
+<span>Jul</span>
+<span>Aug</span>
+<span>Sep</span>
+<span class="text-secondary font-bold">Oct (Now)</span>
+<span class="text-outline/70">Nov (Fcst)</span>
+<span class="text-outline/70">Dec (Fcst)</span>
+</div>
+</div>
+<!-- Quick Metrics Ribbon below Chart -->
+<div class="mt-6 pt-4 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Run-rate Velocity</span>
+<p class="font-title-md text-title-md font-bold text-on-surface">2.71M EGP / day</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Q4 Pipeline Weight</span>
+<p class="font-title-md text-title-md font-bold text-secondary">38.9M EGP</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Target Deviation</span>
+<p class="font-title-md text-title-md font-bold text-emerald-400">+4.25M EGP (Beat)</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Collection Rate</span>
+<p class="font-title-md text-title-md font-bold text-on-surface">94.1% DSO 34d</p>
+</div>
+</div>
+</div>
+<!-- Right: Regional Revenue Distribution (Treemap & Donut) (4 Cols) -->
+<div class="lg:col-span-4 rounded-[20px] bg-white/[0.05] backdrop-blur-[24px] border border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] p-space-lg flex flex-col justify-between relative overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+<div>
+<div class="flex items-center justify-between mb-2">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Regional Share</h2>
+<span class="material-symbols-outlined text-outline text-[20px] hover:text-secondary cursor-pointer">travel_explore</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Geo-split across authorized fulfillment territories</p>
+</div>
+<!-- Donut Visual with Central Metric -->
+<div class="relative my-4 flex items-center justify-center">
+<svg class="w-48 h-48 transform -rotate-90" viewbox="0 0 120 120">
+<!-- Background track -->
+<circle cx="60" cy="60" fill="transparent" r="50" stroke="rgba(255,255,255,0.06)" stroke-width="12"></circle>
+<!-- Cairo: 44% (Dasharray: 2 * pi * 50 = 314.15; 44% = 138.2) -->
+<circle class="hover:brightness-125 transition-all cursor-pointer" cx="60" cy="60" fill="transparent" r="50" stroke="#5BCBFF" stroke-dasharray="138.2 175.95" stroke-dashoffset="0" stroke-linecap="round" stroke-width="12"></circle>
+<!-- Alex: 26% (81.67) -->
+<circle class="hover:brightness-125 transition-all cursor-pointer" cx="60" cy="60" fill="transparent" r="50" stroke="#1E9BE8" stroke-dasharray="81.67 232.48" stroke-dashoffset="-142" stroke-linecap="round" stroke-width="12"></circle>
+<!-- Giza: 18% (56.54) -->
+<circle class="hover:brightness-125 transition-all cursor-pointer" cx="60" cy="60" fill="transparent" r="50" stroke="#2DD4A7" stroke-dasharray="56.54 257.61" stroke-dashoffset="-227" stroke-linecap="round" stroke-width="12"></circle>
+<!-- Delta: 12% (37.69) -->
+<circle class="hover:brightness-125 transition-all cursor-pointer" cx="60" cy="60" fill="transparent" r="50" stroke="#F5A524" stroke-dasharray="37.69 276.46" stroke-dashoffset="-287" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<!-- Center Readout -->
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-label-sm text-label-sm uppercase text-outline">Total Territory</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">84.2M</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">100% Active</span>
+</div>
+</div>
+<!-- Regional Breakdown Cards (Treemap style breakdown) -->
+<div class="space-y-2">
+<!-- Cairo -->
+<div class="group flex items-center justify-between p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-md bg-[#5BCBFF] shadow-[0_0_8px_#5BCBFF]"></div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Cairo Metro Hub</div>
+<div class="font-label-sm text-label-sm text-outline">HQ Central &amp; Obour</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-on-surface">37.1M <span class="text-outline font-normal text-xs">EGP</span></span>
+<div class="font-label-sm text-label-sm text-secondary font-semibold">44% Share</div>
+</div>
+</div>
+<!-- Alex -->
+<div class="group flex items-center justify-between p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-md bg-[#1E9BE8]"></div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Alexandria &amp; Coastal</div>
+<div class="font-label-sm text-label-sm text-outline">Merghany Hub</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-on-surface">21.9M <span class="text-outline font-normal text-xs">EGP</span></span>
+<div class="font-label-sm text-label-sm text-secondary font-semibold">26% Share</div>
+</div>
+</div>
+<!-- Giza -->
+<div class="group flex items-center justify-between p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-md bg-[#2DD4A7]"></div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Giza &amp; Upper Egypt</div>
+<div class="font-label-sm text-label-sm text-outline">6th of October Logistics</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-on-surface">15.2M <span class="text-outline font-normal text-xs">EGP</span></span>
+<div class="font-label-sm text-label-sm text-[#2DD4A7] font-semibold">18% Share</div>
+</div>
+</div>
+<!-- Delta -->
+<div class="group flex items-center justify-between p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 transition-all cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-md bg-[#F5A524]"></div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Delta &amp; Mansoura</div>
+<div class="font-label-sm text-label-sm text-outline">Tanta / Mansoura Depot</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-on-surface">10.1M <span class="text-outline font-normal text-xs">EGP</span></span>
+<div class="font-label-sm text-label-sm text-amber-300 font-semibold">12% Share</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Bottom Operational Grid (3 Glass Columns: 4 cols each) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Column 1: Top 5 Enterprise FMCG Customers (Layer 1 Glass Table) -->
+<div class="rounded-[20px] bg-white/[0.05] backdrop-blur-[24px] border border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] p-space-lg flex flex-col justify-between relative overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">corporate_fare</span>
+<span>Top FMCG Accounts</span>
+</h2>
+<a class="font-label-sm text-label-sm text-secondary hover:underline" href="#">View All 142</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Highest gross volume distribution partners</p>
+<!-- Compact Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-white/10 font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<th class="pb-2.5">Key Client</th>
+<th class="pb-2.5 text-right">YTD Volume</th>
+<th class="pb-2.5 text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5 font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-white/[0.04] transition-colors">
+<td class="py-2.5">
+<div class="font-title-md text-title-md font-semibold text-on-surface">Hyperone Egypt</div>
+<div class="font-label-sm text-label-sm text-outline">Tier 1 Key Chain</div>
+</td>
+<td class="py-2.5 text-right font-semibold text-on-surface">
+                  9,420,000 <span class="text-outline text-xs">EGP</span>
+</td>
+<td class="py-2.5 text-right">
+<span class="inline-block px-2 py-0.5 rounded-full font-label-sm text-[10px] font-semibold bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">Prompt Pay</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-white/[0.04] transition-colors">
+<td class="py-2.5">
+<div class="font-title-md text-title-md font-semibold text-on-surface">Kazyon Markets</div>
+<div class="font-label-sm text-label-sm text-outline">Discount Retail Chain</div>
+</td>
+<td class="py-2.5 text-right font-semibold text-on-surface">
+                  8,110,500 <span class="text-outline text-xs">EGP</span>
+</td>
+<td class="py-2.5 text-right">
+<span class="inline-block px-2 py-0.5 rounded-full font-label-sm text-[10px] font-semibold bg-secondary/10 text-secondary border border-secondary/20">Healthy</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-white/[0.04] transition-colors">
+<td class="py-2.5">
+<div class="font-title-md text-title-md font-semibold text-on-surface">Carrefour Egypt</div>
+<div class="font-label-sm text-label-sm text-outline">Majid Al Futtaim Group</div>
+</td>
+<td class="py-2.5 text-right font-semibold text-on-surface">
+                  7,540,200 <span class="text-outline text-xs">EGP</span>
+</td>
+<td class="py-2.5 text-right">
+<span class="inline-block px-2 py-0.5 rounded-full font-label-sm text-[10px] font-semibold bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">Prompt Pay</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-white/[0.04] transition-colors">
+<td class="py-2.5">
+<div class="font-title-md text-title-md font-semibold text-on-surface">Seoudi Supermarkets</div>
+<div class="font-label-sm text-label-sm text-outline">Premium Gourmet Hub</div>
+</td>
+<td class="py-2.5 text-right font-semibold text-on-surface">
+                  6,210,000 <span class="text-outline text-xs">EGP</span>
+</td>
+<td class="py-2.5 text-right">
+<span class="inline-block px-2 py-0.5 rounded-full font-label-sm text-[10px] font-semibold bg-secondary/10 text-secondary border border-secondary/20">Healthy</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-white/[0.04] transition-colors">
+<td class="py-2.5">
+<div class="font-title-md text-title-md font-semibold text-on-surface">Fathalla Gomla</div>
+<div class="font-label-sm text-label-sm text-outline">Wholesale &amp; Retail</div>
+</td>
+<td class="py-2.5 text-right font-semibold text-on-surface">
+                  4,830,400 <span class="text-outline text-xs">EGP</span>
+</td>
+<td class="py-2.5 text-right">
+<span class="inline-block px-2 py-0.5 rounded-full font-label-sm text-[10px] font-semibold bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">Prompt Pay</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Combined Top 5 Contribution</span>
+<span class="text-on-surface font-semibold">36,111,100 EGP (42.8%)</span>
+</div>
+</div>
+<!-- Column 2: Sales Rep Leaderboard & Target Achievement -->
+<div class="rounded-[20px] bg-white/[0.05] backdrop-blur-[24px] border border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] p-space-lg flex flex-col justify-between relative overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[#2DD4A7] text-[20px]">military_tech</span>
+<span>Commercial Leaders</span>
+</h2>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container/20 text-secondary border border-secondary/30">Tier A Roster</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Quota performance against monthly assigned booking targets</p>
+<div class="space-y-3">
+<!-- Rep 1 -->
+<div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 flex items-center justify-between transition-all">
+<div class="flex items-center gap-3">
+<div class="relative w-10 h-10 flex-shrink-0">
+<img class="w-10 h-10 rounded-full object-cover border border-secondary/30" data-alt="Portrait photo of Mostafa Karim, an Egyptian senior sales executive wearing formal business attire with confident expression inside modern glass distribution HQ" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtyudEPTLyx1aavT2R_0N0UBzKZ7dllApL5Er0f736gcuanWFfiY39WjGOde--bq4jaWPNnbJh-r0D-XAuZi22zgxEnOLI6VdDl5FxIHtyfPDGt69sFWt9BpmIGHBVaV07Ay56BqkfpCZYpCIMY4-rhRsgTlTQHa2ia7Jv6EClDtB1mGRUXLHrJnbBtfHv6gEBSbLYoAMMVvTwIqwcK-Tq4IZyaMyfMCXjap-OjqM"/>
+<span class="absolute -top-1 -left-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[9px] font-bold flex items-center justify-center">1</span>
+</div>
+<div>
+<div class="font-title-md text-title-md font-semibold text-on-surface">Mostafa Karim</div>
+<div class="font-label-sm text-label-sm text-outline">Cairo Key Accounts</div>
+</div>
+</div>
+<!-- Mini Progress Ring and Numbers -->
+<div class="flex items-center gap-3">
+<div class="text-right">
+<div class="font-title-md text-title-md font-bold text-secondary">6.4M <span class="text-outline text-xs">EGP</span></div>
+<div class="font-label-sm text-label-sm text-emerald-400 font-semibold">118% Quota</div>
+</div>
+<svg class="w-8 h-8 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-[#2DD4A7]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="100, 100" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+<!-- Rep 2 -->
+<div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 flex items-center justify-between transition-all">
+<div class="flex items-center gap-3">
+<div class="relative w-10 h-10 flex-shrink-0">
+<img class="w-10 h-10 rounded-full object-cover border border-secondary/30" data-alt="Corporate headshot of Sarah Nour, female business distribution director with modern hijab and sharp professional blazer against navy office backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLWEXHkmnY0OrftME1nFtO64tiIks8Wt1D3VcIdPQKlAqNH1FtpJEPSUcpLDS3C3eeJK2PImTzRkmXvJtvQ9QCz4THUe25VCmcUtHLFWz3dTrEf6zz1t2HDXpxADNkPm1gJk0nwjmXSSZ8-VYRCKSn5kPwv_VHZ7ZEww0b5zqJ_QQkVOlEVdhJuKlt7oZ5jIQbqHVGT_N9ezKpCKNTtuoaFIZV_QKj4yWTcj1S0tU"/>
+<span class="absolute -top-1 -left-1 w-4 h-4 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[9px] font-bold flex items-center justify-center">2</span>
+</div>
+<div>
+<div class="font-title-md text-title-md font-semibold text-on-surface">Sarah Nour</div>
+<div class="font-label-sm text-label-sm text-outline">Alexandria Regional</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<div class="font-title-md text-title-md font-bold text-on-surface">5.8M <span class="text-outline text-xs">EGP</span></div>
+<div class="font-label-sm text-label-sm text-emerald-400 font-semibold">109% Quota</div>
+</div>
+<svg class="w-8 h-8 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-[#5BCBFF]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="90, 100" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+<!-- Rep 3 -->
+<div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 flex items-center justify-between transition-all">
+<div class="flex items-center gap-3">
+<div class="relative w-10 h-10 flex-shrink-0">
+<img class="w-10 h-10 rounded-full object-cover border border-secondary/30" data-alt="Portrait of Ahmed Zaki, energetic middle eastern logistics and wholesale account lead wearing glasses in sleek corporate workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEPwpvWXVBhp4NJDU9wW78JwsSe_KTS4osgkOY48SXVsLA2taz0TlUpghBwnWWNqJ2S1wSPlANgYVxdJHUqo_5TJ_QpH_i8ZhTeEaHvXsuSNwT8jpZiIvxU9u5-WL6bh9xq3OizlWX4daaNQRsX8SNX_anP5J-r0mnkmGiD4E5ko8VdqUcH2MgQNmP4N7XhgbjAOQApMu_dxio5n3_8zjADy3mKwyqYbc8vJ_nR1c"/>
+<span class="absolute -top-1 -left-1 w-4 h-4 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[9px] font-bold flex items-center justify-center">3</span>
+</div>
+<div>
+<div class="font-title-md text-title-md font-semibold text-on-surface">Ahmed Zaki</div>
+<div class="font-label-sm text-label-sm text-outline">Delta Territories</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<div class="font-title-md text-title-md font-bold text-on-surface">5.2M <span class="text-outline text-xs">EGP</span></div>
+<div class="font-label-sm text-label-sm text-emerald-400 font-semibold">102% Quota</div>
+</div>
+<svg class="w-8 h-8 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="82, 100" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+<!-- Rep 4 -->
+<div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 flex items-center justify-between transition-all">
+<div class="flex items-center gap-3">
+<div class="relative w-10 h-10 flex-shrink-0">
+<img class="w-10 h-10 rounded-full object-cover border border-secondary/30" data-alt="Headshot of Dina Adel, professional Egyptian supply chain executive with warm smile in modern bright glass atrium" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYjJ3kQEQUJLgDy_gtgG01cejzmjhGmF2saYbA-wjEgNwXLMUs9hNWevudUxHGUcNlJ96p51gnWG95QubWw9hsKseoTnGtyGJa8JstkMvnwmPjdiO8ocl20muqYuchv2cQw5B4wiM_Xs2Sw3aX4kcuCCTsthY1C_3cB1CaJ3lT2YbMnL0ppNYwCznyfOfqPsG9ZHqyPyOnmYuukesEIDEipX_V2EfU8UOE2TcB2B8"/>
+<span class="absolute -top-1 -left-1 w-4 h-4 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[9px] font-bold flex items-center justify-center">4</span>
+</div>
+<div>
+<div class="font-title-md text-title-md font-semibold text-on-surface">Dina Adel</div>
+<div class="font-label-sm text-label-sm text-outline">Giza &amp; Industrial Zone</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<div class="font-title-md text-title-md font-bold text-on-surface">4.1M <span class="text-outline text-xs">EGP</span></div>
+<div class="font-label-sm text-label-sm text-amber-300 font-semibold">94% Quota</div>
+</div>
+<svg class="w-8 h-8 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-amber-400" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="74, 100" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Overall Team Quota Hit</span>
+<span class="text-secondary font-bold">106.8% Average</span>
+</div>
+</div>
+<!-- Column 3: Operational Pulse & AI Insights Glass Panel -->
+<div class="rounded-[20px] bg-white/[0.05] backdrop-blur-[24px] border border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] p-space-lg flex flex-col justify-between relative overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-secondary/40 to-transparent"></div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_awesome</span>
+<span>Operational Pulse &amp; AI</span>
+</h2>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary/15 text-secondary border border-secondary/20">
+            Engine v4.2
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Autonomous inventory and dispatch alerts for Super Admin action</p>
+<!-- Insights Stack -->
+<div class="space-y-3">
+<!-- Insight 1: Safety Stock Alert -->
+<div class="p-3.5 rounded-xl bg-amber-400/[0.07] hover:bg-amber-400/[0.12] border border-amber-400/20 backdrop-blur-md transition-all">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded-lg bg-amber-400/15 text-amber-300 mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-amber-300">Fast Re-Order Required</span>
+<span class="font-label-sm text-label-sm text-outline">Priority 1</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug">
+<strong class="text-white">Crystal Sunflower Oil 1L</strong> inventory at Alexandria hub dropping below safety threshold (<span class="text-amber-300 font-semibold">3 days remaining</span>).
+                </p>
+<div class="mt-2.5 flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-lg font-label-sm text-label-sm font-semibold bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 border border-amber-400/30 transition-colors">
+                    Draft PO (400 Crates)
+                  </button>
+<button class="px-2.5 py-1 rounded-lg font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors">
+                    Dismiss
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Insight 2: Credit Utilization Warning -->
+<div class="p-3.5 rounded-xl bg-secondary/[0.07] hover:bg-secondary/[0.12] border border-secondary/20 backdrop-blur-md transition-all">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded-lg bg-secondary/15 text-secondary mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Credit Cap Near Peak</span>
+<span class="font-label-sm text-label-sm text-outline">In 48h</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug">
+<strong class="text-white">Kazyon Markets</strong> invoice <span class="text-secondary font-semibold">EGP 1.2M</span> due in 48 hours; total credit line utilization standing at <span class="text-amber-300 font-semibold">82%</span>.
+                </p>
+<div class="mt-2.5 flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-lg font-label-sm text-label-sm font-semibold bg-secondary/20 hover:bg-secondary/30 text-secondary border border-secondary/30 transition-colors">
+                    Notify Account Lead
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Insight 3: Route Optimization Win -->
+<div class="p-3.5 rounded-xl bg-emerald-400/[0.07] hover:bg-emerald-400/[0.12] border border-emerald-400/20 backdrop-blur-md transition-all">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded-lg bg-emerald-400/15 text-emerald-300 mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">route</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-emerald-300">Fleet Dispatch Optimization</span>
+<span class="font-label-sm text-label-sm text-emerald-400 font-semibold">+11.4%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug">
+                  Cairo North delivery route efficiency increased by 11.4% following algorithmic dynamic zone re-balancing this morning.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Model: DistroVision Neural</span>
+<span class="text-emerald-400 flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Active Guardrails
+        </span>
+</div>
+</div>
+</div>
+<!-- Bottom Logistics Quick Dispatch Banner -->
+<div class="rounded-[20px] bg-gradient-to-r from-surface-container-high/90 via-surface-container/70 to-surface-container-low/90 backdrop-blur-[24px] border border-white/10 p-space-md sm:p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md shadow-[0_20px_50px_rgba(2,10,30,0.45)]">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-secondary/10 border border-secondary/25 flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(118,209,255,0.2)]">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface">Fleet Cross-Docking Status (18 Vans En Route)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cairo Hub to Alexandria Terminal scheduled transfer departure at 14:00 (Pallet load: 96% optimal capacity)</p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto justify-end">
+<button class="px-4 py-2 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] border border-white/15 text-on-surface font-label-md text-label-md transition-all">
+        Inspect Manifest
+      </button>
+<button class="px-4 py-2 rounded-xl font-label-md text-label-md font-semibold text-white bg-gradient-to-r from-secondary via-primary-container to-inverse-primary border border-white/30 shadow-[0_8px_24px_rgba(30,155,232,0.4)] hover:brightness-110 active:scale-95 transition-all">
+        Authorize Dispatch
+      </button>
+</div>
+</div>
+</div>
+<!-- Inline Interactive Script for Micro-toggles -->
+<script>
+  (function initDashboard() {
+    const egpBtn = document.getElementById('btn-curr-egp');
+    const usdBtn = document.getElementById('btn-curr-usd');
+
+    if (egpBtn && usdBtn) {
+      egpBtn.addEventListener('click', () => {
+        egpBtn.classList.add('bg-secondary-container', 'text-on-secondary-container', 'font-semibold');
+        egpBtn.classList.remove('text-on-surface-variant');
+        usdBtn.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'font-semibold');
+        usdBtn.classList.add('text-on-surface-variant');
+      });
+
+      usdBtn.addEventListener('click', () => {
+        usdBtn.classList.add('bg-secondary-container', 'text-on-secondary-container', 'font-semibold');
+        usdBtn.classList.remove('text-on-surface-variant');
+        egpBtn.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'font-semibold');
+        egpBtn.classList.add('text-on-surface-variant');
+      });
+    }
+  })();
+</script></div></main></div></body></html>

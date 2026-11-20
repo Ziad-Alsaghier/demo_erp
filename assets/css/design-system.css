@@ -1,0 +1,291 @@
+/* Wise ERP Luminous Enterprise Fleet - Unified Design System & RTL Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+:root {
+  --color-surface: #00142a;
+  --color-surface-dim: #00142a;
+  --color-surface-bright: #273a53;
+  --color-surface-container: #0a2038;
+  --color-surface-container-high: #162b43;
+  --color-surface-container-highest: #22364e;
+  --color-primary: #94ccff;
+  --color-primary-container: #1e9be8;
+  --color-secondary: #76d1ff;
+  --color-secondary-container: #0a9ccd;
+  --color-tertiary: #aec6ff;
+  --color-outline: #89929c;
+  --color-outline-variant: #3f4851;
+  --color-on-surface: #d2e4ff;
+  --color-on-surface-variant: #bfc7d3;
+}
+
+/* Base custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 20, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 204, 255, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 204, 255, 0.45);
+}
+
+/* Font classes */
+.font-arabic {
+  font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* ========================================================================= */
+/* RTL Bidirectional Adaptation Engine                                        */
+/* ========================================================================= */
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] body {
+  font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: right;
+}
+
+/* Sidebar Mirrored Positioning */
+html[dir="rtl"] aside.fixed.left-0 {
+  left: auto !important;
+  right: 0 !important;
+  border-right-width: 0 !important;
+  border-left-width: 1px !important;
+  border-left-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 20px 50px rgba(2, 10, 30, 0.45) !important;
+}
+
+/* Content Main Shell Left/Right Margin & Padding */
+html[dir="rtl"] .pl-\[264px\] {
+  padding-left: 0 !important;
+  padding-right: 264px !important;
+}
+
+/* Header Mirrored Offsets */
+html[dir="rtl"] header.fixed.left-\[264px\] {
+  left: 0 !important;
+  right: 264px !important;
+}
+
+/* Active navigation item indicator */
+html[dir="rtl"] aside nav a[aria-current="page"],
+html[dir="rtl"] aside nav a.border-l-2 {
+  border-left-width: 0 !important;
+  border-right-width: 2px !important;
+  border-right-color: #76d1ff !important;
+}
+
+/* Header search input mirroring */
+html[dir="rtl"] .header-search-wrap span.absolute.left-3 {
+  left: auto !important;
+  right: 0.75rem !important;
+}
+
+html[dir="rtl"] .header-search-wrap input {
+  padding-left: 3rem !important;
+  padding-right: 2.75rem !important;
+  text-align: right;
+}
+
+html[dir="rtl"] .header-search-wrap span.absolute.right-3 {
+  right: auto !important;
+  left: 0.75rem !important;
+}
+
+/* Notification badge */
+html[dir="rtl"] .notif-badge {
+  right: auto !important;
+  left: -0.25rem !important;
+}
+
+/* Chevrons and arrow directions */
+html[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
+}
+
+/* Tables text alignments */
+html[dir="rtl"] th,
+html[dir="rtl"] td {
+  text-align: right;
+}
+
+/* ========================================================================= */
+/* Toast Notification Component                                             */
+/* ========================================================================= */
+
+#wise-toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+  max-width: 420px;
+  width: calc(100vw - 2rem);
+}
+
+html[dir="rtl"] #wise-toast-container {
+  right: auto;
+  left: 1.5rem;
+}
+
+.wise-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  background: rgba(10, 32, 56, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(148, 204, 255, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 15, 33, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  color: #d2e4ff;
+  animation: toastSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.3s ease;
+}
+
+.wise-toast.toast-hiding {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+}
+
+.wise-toast.toast-success {
+  border-color: rgba(45, 212, 167, 0.5);
+}
+.wise-toast.toast-success .toast-icon {
+  color: #2dd4a7;
+}
+
+.wise-toast.toast-info {
+  border-color: rgba(118, 209, 255, 0.5);
+}
+.wise-toast.toast-info .toast-icon {
+  color: #76d1ff;
+}
+
+.wise-toast.toast-warning {
+  border-color: rgba(255, 180, 171, 0.5);
+}
+.wise-toast.toast-warning .toast-icon {
+  color: #ffb4ab;
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ========================================================================= */
+/* Command Palette Modal (Ctrl+K)                                            */
+/* ========================================================================= */
+
+#wise-command-palette {
+  position: fixed;
+  inset: 0;
+  z-index: 99998;
+  background: rgba(0, 15, 33, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 12vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+#wise-command-palette.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cmd-box {
+  width: 100%;
+  max-width: 680px;
+  background: rgba(10, 32, 56, 0.95);
+  border: 1px solid rgba(148, 204, 255, 0.3);
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 15, 33, 0.8), 0 0 30px rgba(30, 155, 232, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-10px) scale(0.98);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#wise-command-palette.active .cmd-box {
+  transform: translateY(0) scale(1);
+}
+
+.cmd-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #d2e4ff;
+  text-decoration: none;
+}
+
+.cmd-item:hover,
+.cmd-item.selected {
+  background: rgba(30, 155, 232, 0.2);
+  color: #ffffff;
+  border-left: 2px solid #76d1ff;
+}
+
+html[dir="rtl"] .cmd-item:hover,
+html[dir="rtl"] .cmd-item.selected {
+  border-left: none;
+  border-right: 2px solid #76d1ff;
+}
+
+/* ========================================================================= */
+/* Notifications & Quick Creation Drawers                                   */
+/* ========================================================================= */
+
+.wise-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 32, 56, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 15, 33, 0.6);
+  display: none;
+}
+
+html[dir="rtl"] .wise-dropdown-menu {
+  right: auto;
+  left: 0;
+}
+
+.wise-dropdown-menu.show {
+  display: block;
+  animation: toastSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#00142a", "secondary-container": "#0a9ccd", "secondary-fixed-dim": "#76d1ff", "primary": "#94ccff", "on-primary-fixed-variant": "#004b74", "surface-container-lowest": "#000f21", "tertiary-container": "#7b94cb", "on-primary": "#003352", "surface": "#00142a", "on-primary-fixed": "#001d32", "background": "#00142a", "surface-container": "#0a2038", "on-tertiary-fixed": "#001a42", "surface-bright": "#273a53", "on-tertiary-container": "#0d2b5c", "on-primary-container": "#002f4c", "on-secondary-fixed": "#001e2b", "inverse-surface": "#d2e4ff", "on-secondary": "#003548", "primary-container": "#1e9be8", "primary-fixed-dim": "#94ccff", "inverse-on-surface": "#1d3149", "tertiary-fixed": "#d8e2ff", "on-error": "#690005", "on-secondary-container": "#002e3f", "secondary": "#76d1ff", "inverse-primary": "#006399", "outline": "#89929c", "on-surface": "#d2e4ff", "surface-tint": "#94ccff", "on-tertiary-fixed-variant": "#2c4678", "on-background": "#d2e4ff", "surface-container-low": "#061c33", "error": "#ffb4ab", "error-container": "#93000a", "on-tertiary": "#122f60", "tertiary": "#aec6ff", "tertiary-fixed-dim": "#aec6ff", "secondary-fixed": "#c2e8ff", "surface-variant": "#22364e", "on-surface-variant": "#bfc7d3", "on-secondary-fixed-variant": "#004d67", "surface-container-highest": "#22364e", "surface-container-high": "#162b43", "on-error-container": "#ffdad6", "primary-fixed": "#cde5ff", "outline-variant": "#3f4851" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-md": "1rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "2rem", "space-xl": "2rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "numeric-metric": ["Inter"], "label-md": ["Inter"], "title-md": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "numeric-metric": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary-fixed"><aside class="fixed left-0 top-0 h-full w-[264px] bg-[#00142a]/95 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)]"><div class="flex flex-col h-full overflow-hidden"><div class="h-[72px] px-space-lg flex items-center justify-between border-b border-white/10"><div class="flex items-center gap-space-sm"><img alt="Wise Distribution Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDryduxKmod-XeUaCCLPODn7x8Bb9-rsbknpIVVZvb6dl9I5SvGzz3nR48zD_r9ZwpWSS8nt_iRQAS9U9HhA1cXCJ-ZF8ERMnEWvF_A7sN-9_UUXuEU4Oaof5cONDiIdMAD7OTdpW1HfTLzRvxm2YwVGoF3aZw7yzkGYBlLbK2rBweBz7v4phCZ6vU3nm_LoPBKPbJwEKXrLuDMXKpS3Jn8asUt_l9QeFJhtSYe0emy"/><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">Wise ERP</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Distribution Egypt</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg transition-colors"><span class="material-symbols-outlined text-[18px]">dock_to_left</span></button></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-xs" data-active-classes="bg-gradient-to-r from-secondary/20 to-primary-container/10 text-secondary border-l-2 border-secondary font-semibold shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]"><div class="flex items-center justify-between px-space-sm pt-2 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Operations / Inventory</span><span class="px-1.5 py-0.5 rounded-full font-label-sm text-[10px] bg-secondary-container/20 text-secondary border border-secondary/30">Hub</span></div><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="inventory-dashboard-s-dash-inv" href="#">Inventory Dashboard (S-DASH-INV)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stock-on-hand-&amp;-availability-s-inv-stock" href="#">Stock on Hand &amp; Availability (S-INV-STOCK)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="goods-receipts-&amp;-grn-s-inv-receipt" href="#">Goods Receipts &amp; GRN (S-INV-RECEIPT)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="inter-warehouse-transfers-s-inv-transfer" href="#">Inter-Warehouse Transfers (S-INV-TRANSFER)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="warehouses-&amp;-locations-s-inv-warehouses" href="#">Warehouses &amp; Locations (S-INV-WAREHOUSES)</a><div class="px-space-sm pt-4 pb-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Finance &amp; Accounts</div><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="chart-of-accounts-s-acc-coa" href="#">Chart of Accounts (S-ACC-COA)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="journal-entries-s-acc-journal" href="#">Journal Entries (S-ACC-JOURNAL)</a><a class="flex items-center px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="treasury-&amp;-cheques-s-acc-treasury" href="#">Treasury &amp; Cheques (S-ACC-TREASURY)</a></nav></div><div class="p-space-md border-t border-white/10 bg-surface-container-low/70 backdrop-blur-md flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-secondary">hub</span>Cairo Central Hub</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm text-secondary-fixed">Live Stock Sync: Active</span><span class="material-symbols-outlined text-[16px] text-outline hover:text-on-surface cursor-pointer">unfold_more</span></div></div></div></aside><div class="pl-[264px]"><header class="fixed top-0 left-[264px] right-0 h-[72px] z-40 bg-[#00142a]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)] px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-secondary">home</span><span>/</span><span class="text-outline hover:text-on-surface cursor-pointer">Operations</span><span>/</span><span class="text-on-surface font-semibold">Inventory</span></div><div class="flex-1 max-w-xl mx-space-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-12 py-2 bg-[#04122b]/80 border border-white/15 rounded-lg text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/40 transition-all" placeholder="Search SKU, lots, transfers, GRN, warehouses (⌘K)..." type="text"/><span class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container-high border border-white/10 font-label-sm text-label-sm text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-space-sm"><div class="relative"><select class="appearance-none bg-surface-container-high/60 border border-white/15 text-on-surface font-body-sm text-body-sm rounded-lg pl-3 pr-8 py-1.5 hover:bg-surface-container-highest cursor-pointer focus:outline-none focus:border-secondary"><option>Cairo HQ &amp; Central Hub</option><option>Alexandria Coastal Hub</option><option>Giza Fulfillment</option><option>Delta Mansoura</option></select><span class="material-symbols-outlined absolute right-2 top-2 pointer-events-none text-outline text-[18px]">expand_more</span></div><div class="flex items-center border border-white/15 rounded-lg p-0.5 bg-surface-container-high/40"><button class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-secondary-container text-on-secondary-container">EN</button><button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">ع</button></div><button class="p-1.5 rounded-lg border border-white/15 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><div class="relative"><button class="p-2 rounded-lg border border-white/15 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full font-label-sm text-[10px] bg-secondary text-on-secondary font-bold shadow-[0_0_10px_rgba(118,209,255,0.6)]">5</span></div><div class="h-6 w-px bg-white/15 mx-1"></div><div class="flex items-center gap-3 pl-1"><div class="flex flex-col text-right"><div class="flex items-center gap-1.5 justify-end"><span class="font-title-md text-title-md font-semibold text-on-surface">Tarek El-Sayed</span><span class="px-1.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-primary-container/20 text-secondary border border-secondary/30">Super Admin</span></div><span class="font-label-sm text-label-sm text-outline">Inventory Controller • Scope: All</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-secondary/40 shadow-[0_0_12px_rgba(91,203,255,0.2)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCultRCtgMRciVnK51-F0eUsLbvHS18gsIaQOxtHuKNKgGK7VdoAcDl4WgDbSh4XJ91VDiO50qXeDlh2vOYWYtqIlueYzfKqwUrqKJTHj0hymeNiiU-85wfsCNq8hfjNvNmvg1bEXYoxNnei7URQsxx59IdhDLKU2LngBC4FB7aOhLbBQMr216iGCzBul8s67Wl_IOkppRPIUtFFNEIsNY2a6XrqPz5ia7nCatKUCw"/></div></div></header><main class="relative pt-[72px] min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Orbs -->
+<div class="relative w-full overflow-hidden px-space-lg py-space-md space-y-space-lg">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-80 right-0 w-[480px] h-[480px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<!-- Screen Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md relative z-10">
+<div class="space-y-1">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<span class="text-secondary font-semibold">Wise Logistics</span>
+<span>/</span>
+<span class="text-outline">Inbound Fulfillment</span>
+<span>/</span>
+<span class="text-on-surface font-semibold tracking-wide">S-INV-RECEIPT</span>
+</div>
+<div class="flex items-baseline gap-3">
+<h1 class="font-headline-xl text-headline-xl font-bold tracking-tight text-on-surface">
+            Goods Receipts &amp; Inbound Receiving
+          </h1>
+<span class="font-headline-md text-headline-md text-secondary/90 font-medium">
+            (سندات استلام البضائع - GRN)
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Supplier PO verification, dock gate inspection, automated batch &amp; cold-chain telemetry logging, and real-time 3-way journal voucher posting.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-center">
+<button class="px-3.5 py-2 rounded-lg font-label-md text-label-md font-semibold bg-surface-container-high/80 hover:bg-surface-container-highest text-on-surface flex items-center gap-1.5 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">calendar_today</span>
+<span>Delivery Schedule</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg font-label-md text-label-md font-semibold bg-surface-container-high/80 hover:bg-surface-container-highest text-on-surface flex items-center gap-1.5 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Logs</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg font-label-md text-label-md font-semibold bg-surface-container-high hover:bg-surface-container-highest text-secondary flex items-center gap-1.5 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">barcode_scanner</span>
+<span>Scan Pallet / Barcode</span>
+</button>
+<button class="px-4 py-2 rounded-lg font-label-md text-label-md font-bold bg-gradient-to-r from-secondary to-primary-container hover:from-secondary-fixed hover:to-primary text-on-secondary shadow-md hover:shadow-lg transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ New Inbound Receipt</span>
+</button>
+</div>
+</div>
+<!-- KPI Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md relative z-10">
+<!-- KPI 1 -->
+<div class="p-space-md rounded-2xl bg-surface-container/60 backdrop-blur-xl shadow-lg relative overflow-hidden group hover:bg-surface-container/80 transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase font-semibold">Inbound Received Today</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary/15 text-secondary">14 Shipments</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-numeric-metric text-numeric-metric text-on-surface">6,850,000</span>
+<span class="font-body-sm text-body-sm text-outline font-medium">EGP</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">domain_verification</span>
+<span class="font-medium">99.2% Quality Pass</span>
+</div>
+<span class="text-outline text-label-sm">5 Active Docks</span>
+</div>
+<!-- Micro sparkline decor -->
+<div class="mt-3 w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary w-[92%] rounded-full"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md rounded-2xl bg-surface-container/60 backdrop-blur-xl shadow-lg relative overflow-hidden group hover:bg-surface-container/80 transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase font-semibold">Pending Deliveries</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-primary-container/20 text-primary">In Transit</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-numeric-metric text-numeric-metric text-on-surface">8</span>
+<span class="font-body-sm text-body-sm text-outline font-medium">Purchase Orders</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Central Badr &amp; 6th Oct</span>
+<span class="text-secondary font-medium">ETA &lt; 18:00</span>
+</div>
+<div class="mt-3 w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-container w-[65%] rounded-full"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md rounded-2xl bg-surface-container/60 backdrop-blur-xl shadow-lg relative overflow-hidden group hover:bg-surface-container/80 transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase font-semibold">Three-Way Matching</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container/25 text-secondary">Auto-Reconciled</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-numeric-metric text-numeric-metric text-on-surface">94.6%</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">+2.1% w/w</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface-variant">0 Variance Tolerance</span>
+<span class="text-outline text-label-sm">PO vs GRN vs Bill</span>
+</div>
+<div class="mt-3 w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary w-[94.6%] rounded-full"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md rounded-2xl bg-surface-container/60 backdrop-blur-xl shadow-lg relative overflow-hidden group hover:bg-surface-container/80 transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase font-semibold">Quarantine &amp; Hold</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-error-container/30 text-error">Critical Alert</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-numeric-metric text-numeric-metric text-error">1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Shipment Locked</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-error truncate max-w-[180px]">Reefer temp fluctuation</span>
+<span class="text-secondary font-medium hover:underline cursor-pointer">Review</span>
+</div>
+<div class="mt-3 w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-error w-[15%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Active Document Overview Card (GRN Header Banner) -->
+<div class="rounded-2xl bg-surface-container/70 backdrop-blur-xl p-space-md shadow-xl relative z-10 space-y-space-md">
+<!-- Top Meta Row -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-secondary shadow-inner">
+<span class="material-symbols-outlined text-[28px]">receipt_long</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">GRN-2024-10-0941</span>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-secondary-container/25 text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                Verified &amp; Posted (مرحل ومكتمل)
+              </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-medium">Dock Bay #04</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">link</span>
+                PO: <strong class="text-on-surface font-semibold">PO-2024-0824</strong>
+</span>
+<span class="text-outline">•</span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+                Supplier: <strong class="text-on-surface font-semibold">Juhayna Food Industries S.A.E (شركة جهينة للصناعات الغذائية)</strong>
+</span>
+<span class="text-outline">•</span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">warehouse</span>
+                Facility: <strong class="text-on-surface font-semibold">Central Badr Distribution Center</strong>
+</span>
+</div>
+</div>
+</div>
+<!-- Verification Personnel Badge -->
+<div class="flex items-center gap-4 bg-surface-container-high/60 px-space-md py-2.5 rounded-xl">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface font-bold text-[11px]">MK</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-outline uppercase tracking-wider">Chief Storekeeper</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Mahmoud Kamel</span>
+</div>
+</div>
+<div class="h-6 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary font-bold text-[11px]">TN</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-outline uppercase tracking-wider">Quality Inspector</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Eng. Tariq Nabil</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Transaction Stepper / Progress HUD -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-2 pt-2">
+<!-- Step 1 -->
+<div class="flex flex-col gap-1.5 p-2.5 rounded-xl bg-surface-container-high/50">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">01. PO ISSUED</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Ref: PO-2024-0824</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col gap-1.5 p-2.5 rounded-xl bg-surface-container-high/50">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">02. GATE ARRIVAL</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Truck: ق ج ط ٨٩٢٣</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col gap-1.5 p-2.5 rounded-xl bg-surface-container-high/50">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">03. INSPECTED</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Seal Intact • Temp +3.5°C</span>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col gap-1.5 p-2.5 rounded-xl bg-surface-container-high/50">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">04. GRN COSTED</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Landed Allocation Applied</span>
+</div>
+<!-- Step 5 Active -->
+<div class="flex flex-col gap-1.5 p-2.5 rounded-xl bg-secondary-container/20">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">05. JV POSTED</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface truncate">JV-2024-10-0480 Matched</span>
+</div>
+</div>
+</div>
+<!-- Main Operational Workspace: 2-Column Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg relative z-10">
+<!-- Left Column: Line Items Grid & Landed Costs (8 of 12 cols = ~67%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Tabbed Header for Line Items / Inspection Details -->
+<div class="p-space-md rounded-2xl bg-surface-container/70 backdrop-blur-xl shadow-xl space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">Received Cargo Manifest</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary/15 text-secondary font-semibold">3 Item Lines</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center bg-surface-container-high rounded-lg p-0.5">
+<button class="px-3 py-1 rounded-md font-label-sm text-label-sm font-semibold bg-secondary text-on-secondary shadow-sm">SKU Items Breakdown</button>
+<button class="px-3 py-1 rounded-md font-label-sm text-label-sm font-semibold text-on-surface-variant hover:text-on-surface">Landed Cost Ledger</button>
+</div>
+<button class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest/60">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/80 text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-3">#</th>
+<th class="py-3 px-3">SKU &amp; Description</th>
+<th class="py-3 px-2 text-right">PO Qty</th>
+<th class="py-3 px-2 text-right">Recv</th>
+<th class="py-3 px-2 text-right text-secondary">Accepted</th>
+<th class="py-3 px-2 text-right text-error">Damaged</th>
+<th class="py-3 px-3 text-right">Unit Cost</th>
+<th class="py-3 px-3">Lot / Expiry</th>
+<th class="py-3 px-3 text-right">Total (EGP)</th>
+<th class="py-3 px-3 text-center">QC Status</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-surface-container-high/60">
+<!-- Line Item 1 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3.5 px-3 text-outline font-mono">01</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Juhayna Pure Apple Juice 1L</span>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant">
+<span class="font-mono text-secondary">SKU-JUH-1021</span>
+<span>•</span>
+<span>12 Bottles/Ctn</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-2 text-right font-mono">5,000</td>
+<td class="py-3.5 px-2 text-right font-mono">5,000</td>
+<td class="py-3.5 px-2 text-right font-mono text-secondary font-bold">5,000</td>
+<td class="py-3.5 px-2 text-right font-mono text-outline">0</td>
+<td class="py-3.5 px-3 text-right font-mono">34.50</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col text-[11px]">
+<span class="font-mono font-medium text-on-surface">B24-10-APP</span>
+<span class="text-outline">Exp: 28 Oct 2025</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right font-mono font-bold text-on-surface">172,500.00</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-secondary/15 text-secondary">
+<span class="material-symbols-outlined text-[12px]">check</span> Passed QC
+                    </span>
+</td>
+</tr>
+<!-- Line Item 2 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3.5 px-3 text-outline font-mono">02</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Juhayna Greek Yogurt Plain 180g</span>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant">
+<span class="font-mono text-secondary">SKU-JUH-3044</span>
+<span>•</span>
+<span>12 Cups/Tray</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-2 text-right font-mono">2,400</td>
+<td class="py-3.5 px-2 text-right font-mono">2,400</td>
+<td class="py-3.5 px-2 text-right font-mono text-secondary font-bold">2,380</td>
+<td class="py-3.5 px-2 text-right font-mono text-error font-bold">20</td>
+<td class="py-3.5 px-3 text-right font-mono">21.00</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col text-[11px]">
+<span class="font-mono font-medium text-on-surface">B24-GY-09</span>
+<span class="text-outline">Exp: 15 Dec 2024</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right font-mono font-bold text-on-surface">49,980.00</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-primary-container/20 text-primary">
+<span class="material-symbols-outlined text-[12px]">thermostat</span> 3.6°C Logged
+                    </span>
+</td>
+</tr>
+<!-- Line Item 3 -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-3.5 px-3 text-outline font-mono">03</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Juhayna Cooking Cream 1L</span>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant">
+<span class="font-mono text-secondary">SKU-JUH-5012</span>
+<span>•</span>
+<span>12 Units/Ctn</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-2 text-right font-mono">1,200</td>
+<td class="py-3.5 px-2 text-right font-mono">1,200</td>
+<td class="py-3.5 px-2 text-right font-mono text-secondary font-bold">1,200</td>
+<td class="py-3.5 px-2 text-right font-mono text-outline">0</td>
+<td class="py-3.5 px-3 text-right font-mono">68.00</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col text-[11px]">
+<span class="font-mono font-medium text-on-surface">B24-CC-14</span>
+<span class="text-outline">Exp: 10 May 2025</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right font-mono font-bold text-on-surface">81,600.00</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-secondary/15 text-secondary">
+<span class="material-symbols-outlined text-[12px]">check</span> Passed QC
+                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Damage Discrepancy Note Banner -->
+<div class="p-3 rounded-xl bg-surface-container-high/60 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">info</span>
+<div class="flex-1 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-on-surface">Inspection Note on SKU-JUH-3044:</span>
+<span class="text-secondary font-mono text-[11px] font-semibold">Variance: -20 Units</span>
+</div>
+<p class="text-on-surface-variant text-[12px] mt-0.5">
+                20 trays recorded with carton puncture and outer packaging seal compression during transport unloading at Bay 4. Quarantined for supplier credit note debiting (مذكرة خصم مورد).
+              </p>
+</div>
+</div>
+<!-- Financial Subtotals & Landed Breakdown -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-2">
+<!-- Landed Cost Component Allocation -->
+<div class="p-space-sm rounded-xl bg-surface-container-low/80 space-y-2">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Landed Cost Allocation (+2.4%)</span>
+<div class="space-y-1.5 text-[12px] font-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Reefer Freight Dispatch (Delta to Badr)</span>
+<span class="font-mono text-on-surface">42,000.00 EGP</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Pallet Handling &amp; Offloading Insurance</span>
+<span class="font-mono text-on-surface">22,500.00 EGP</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Port &amp; Quality Inspection Duty (NFSA)</span>
+<span class="font-mono text-on-surface">17,580.00 EGP</span>
+</div>
+<div class="h-px bg-surface-container-highest my-1"></div>
+<div class="flex justify-between font-bold text-secondary">
+<span>Total Capitalized Inbound Cost</span>
+<span class="font-mono">82,080.00 EGP</span>
+</div>
+</div>
+</div>
+<!-- Total Quantities and Values -->
+<div class="p-space-sm rounded-xl bg-surface-container-low/80 flex flex-col justify-between">
+<div class="space-y-1.5 text-[12px] font-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Total Packages Ordered</span>
+<span class="font-mono text-on-surface">8,600 Packs</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Total Packages Received</span>
+<span class="font-mono text-on-surface">8,600 Packs</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Accepted for Inventory Intake</span>
+<span class="font-mono text-secondary font-semibold">8,580 Packs</span>
+</div>
+<div class="flex justify-between text-error">
+<span>Total Damaged / Rejected</span>
+<span class="font-mono font-semibold">20 Packs</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-t border-surface-container-highest flex items-baseline justify-between">
+<span class="font-title-md text-title-md font-bold text-on-surface">Net Inbound Value</span>
+<div class="text-right">
+<span class="font-numeric-metric text-numeric-metric font-bold text-secondary">3,420,000.00</span>
+<span class="font-body-sm text-body-sm text-outline ml-1">EGP</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Dock Log Snapshot: Unloading Timeline -->
+<div class="p-space-md rounded-2xl bg-surface-container/70 backdrop-blur-xl shadow-xl flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<div class="p-2.5 rounded-xl bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div>
+<span class="font-title-md text-title-md font-semibold text-on-surface">Dock Operations Telematics</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Unloading completed in 42 mins. Forklift Operators: Unit #08 &amp; #12 assigned to Zone A Cold Storage.
+              </p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-secondary font-label-md text-label-md font-semibold transition-all">
+            View Sensor Waveform
+          </button>
+</div>
+</div>
+<!-- Right Column: Verification, Accounting & Tax Integration (4 of 12 cols = ~33%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Quality & Cold-Chain Telemetry Panel -->
+<div class="p-space-md rounded-2xl bg-surface-container/70 backdrop-blur-xl shadow-xl space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-bold text-on-surface">Dock &amp; QC Telemetry</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary/15 text-secondary">Compliant</span>
+</div>
+<div class="space-y-3">
+<div class="p-3 rounded-xl bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">ac_unit</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-outline">Reefer Temp Log</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">+3.5°C Sustained</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary text-[11px] font-mono">Target: 2°C - 5°C</span>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">lock</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-outline">Cargo Seal Verification</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface font-mono">#EG-JUH-99214</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+</div>
+</div>
+<!-- 3-Way Accounting Journal Auto-Post Integration -->
+<div class="p-space-md rounded-2xl bg-surface-container/70 backdrop-blur-xl shadow-xl space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-title-md text-title-md font-bold text-on-surface">Auto-Posted Journal Entry</span>
+<p class="font-body-sm text-[11px] text-outline">GL Ledger Impact (سند القيد الآلي)</p>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-[11px] font-mono bg-secondary-container/25 text-secondary font-bold">
+              JV-2024-10-0480
+            </span>
+</div>
+<!-- Mini Journal Voucher Table -->
+<div class="rounded-xl overflow-hidden bg-surface-container-lowest/70 border border-surface-container-highest">
+<div class="p-2.5 bg-surface-container-high/80 grid grid-cols-12 text-[11px] font-label-sm uppercase tracking-wider text-outline">
+<span class="col-span-7">Account / Details</span>
+<span class="col-span-5 text-right">Debit / Credit</span>
+</div>
+<div class="divide-y divide-surface-container-high/60 font-body-sm text-[12px]">
+<!-- Debit Finished Goods -->
+<div class="p-2.5 grid grid-cols-12 items-center hover:bg-surface-container/40">
+<div class="col-span-7 flex flex-col">
+<span class="font-mono text-secondary font-semibold">11310</span>
+<span class="text-on-surface truncate">Finished Goods - Badr DC</span>
+</div>
+<div class="col-span-5 text-right font-mono">
+<span class="text-secondary font-bold">Dr 3,420,000</span>
+</div>
+</div>
+<!-- Credit Accounts Payable -->
+<div class="p-2.5 grid grid-cols-12 items-center hover:bg-surface-container/40">
+<div class="col-span-7 flex flex-col">
+<span class="font-mono text-primary font-semibold">21100</span>
+<span class="text-on-surface truncate">AP - Juhayna Food Ind.</span>
+</div>
+<div class="col-span-5 text-right font-mono">
+<span class="text-on-surface-variant">Cr 3,420,000</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant px-1">
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">sync</span> Balanced &amp; Live Synchronized
+            </span>
+<span class="font-mono text-outline">Ref: GRN-2024-10-0941</span>
+</div>
+</div>
+<!-- Egyptian Tax Authority (ETA) e-Invoicing Verification -->
+<div class="p-space-md rounded-2xl bg-surface-container/70 backdrop-blur-xl shadow-xl space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-bold text-on-surface">ETA e-Invoicing Hash</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[11px] font-bold bg-secondary/15 text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              ETA Synced
+            </span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+            Egyptian Tax Authority portal match confirmed against Supplier e-Invoice UUID:
+          </p>
+<div class="p-2 rounded-lg bg-surface-container-high font-mono text-[11px] text-secondary break-all select-all">
+            7a89f92c10b74051a89c894082fa460d3d578bca612e4b33a78912ef09bc0032
+          </div>
+</div>
+<!-- Action Control Center -->
+<div class="p-space-md rounded-2xl bg-surface-container/70 backdrop-blur-xl shadow-xl space-y-2.5">
+<button class="w-full py-2.5 px-4 rounded-xl font-label-md text-label-md font-bold bg-gradient-to-r from-secondary to-primary-container hover:from-secondary-fixed hover:to-primary text-on-secondary shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span>Print Official GRN (سند استلام مخزني)</span>
+</button>
+<button class="w-full py-2.5 px-4 rounded-xl font-label-md text-label-md font-semibold bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[20px] text-secondary">forklift</span>
+<span>Generate Put-away Tasks</span>
+</button>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="py-2 px-3 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]">outgoing_mail</span>
+<span>Notify Purchasing</span>
+</button>
+<button class="py-2 px-3 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container-high hover:bg-surface-container-highest text-secondary flex items-center justify-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+<span>View 3-Way Match</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
