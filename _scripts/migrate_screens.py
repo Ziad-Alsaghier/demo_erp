@@ -36,14 +36,8 @@ def generate_standard_sidebar(active_screen_id):
     return f'''<aside class="fixed left-0 top-0 h-full w-[264px] bg-[#00142a]/95 backdrop-blur-2xl z-50 flex flex-col justify-between border-r border-white/10 shadow-[0_20px_50px_rgba(2,10,30,0.45)]">
   <div class="flex flex-col h-full overflow-hidden">
     <div class="h-[72px] px-space-lg flex items-center justify-between border-b border-white/10">
-      <a href="../analytics/executive-dashboard.html" class="flex items-center gap-space-sm group">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-secondary via-primary-container to-primary flex items-center justify-center shadow-lg shadow-primary-container/30">
-          <span class="material-symbols-outlined text-surface font-bold text-[20px]">hub</span>
-        </div>
-        <div class="flex flex-col">
-          <span class="font-headline-md text-[18px] font-bold tracking-tight text-on-surface group-hover:text-secondary transition-colors">Wise ERP</span>
-          <span class="font-label-sm text-[10px] text-secondary uppercase tracking-widest" data-i18n="brand_subtitle">Distribution Egypt</span>
-        </div>
+      <a href="../analytics/executive-dashboard.html" class="flex items-center group py-2">
+        <img src="../assets/images/wise-logo.png" alt="Wise Distribution Logo" class="h-9 w-auto max-w-[170px] object-contain drop-shadow-[0_2px_10px_rgba(118,209,255,0.25)] group-hover:brightness-110 transition-all"/>
       </a>
       <a href="../index.html" class="text-on-surface-variant hover:text-secondary p-1.5 rounded-lg transition-colors" title="Showcase Portal">
         <span class="material-symbols-outlined text-[18px]">apps</span>
@@ -248,6 +242,8 @@ def process_file(source_folder, dest_rel_path, screen_id, title_en, title_ar, i1
 
     # Head injection
     asset_injection = '''
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png"/>
+  <link rel="shortcut icon" href="../assets/images/favicon.ico"/>
   <link rel="stylesheet" href="../assets/css/design-system.css"/>
   <script src="../assets/js/translations.js"></script>
   <script src="../assets/js/i18n.js"></script>
@@ -267,6 +263,13 @@ def process_file(source_folder, dest_rel_path, screen_id, title_en, title_ar, i1
         # Update SSO buttons
         content = content.replace('data-path="multi-factor-authentication" href="#"', 'href="two-factor-authentication.html"')
         content = content.replace('data-path="corporate-sso-login" href="#"', 'href="corporate-sso-login.html"')
+        # Replace header brand with new logo
+        content = re.sub(
+            r'<div class="flex items-center gap-space-md">\s*<div class="w-10 h-10[^>]*>.*?</div>\s*<div class="flex flex-col">.*?</div>\s*</div>',
+            '<a href="../index.html" class="flex items-center gap-3"><img src="../assets/images/wise-logo.png" alt="Wise Distribution" class="h-9 w-auto object-contain"/></a>',
+            content,
+            flags=re.DOTALL
+        )
         # Replace language toggle button in header
         content = re.sub(
             r'<button[^>]*>\s*<span[^>]*>translate</span>\s*<span[^>]*>العربية</span>.*?EN</span>\s*</button>',
@@ -280,6 +283,13 @@ def process_file(source_folder, dest_rel_path, screen_id, title_en, title_ar, i1
         content = content.replace('{{DATA:SCREEN:SCREEN_38}}', '../analytics/executive-dashboard.html')
         content = content.replace('data-path="corporate-sso-login" href="#"', 'href="corporate-sso-login.html"')
         content = content.replace('data-path="multi-factor-authentication" href="#"', 'href="two-factor-authentication.html"')
+        # Replace header brand with new logo
+        content = re.sub(
+            r'<div class="flex items-center gap-space-md">\s*<div class="w-10 h-10[^>]*>.*?</div>\s*<div class="flex flex-col">.*?</div>\s*</div>',
+            '<a href="../index.html" class="flex items-center gap-3"><img src="../assets/images/wise-logo.png" alt="Wise Distribution" class="h-9 w-auto object-contain"/></a>',
+            content,
+            flags=re.DOTALL
+        )
         # Make Verify button route to executive dashboard
         content = re.sub(
             r'<button([^>]*)>\s*(?:<span[^>]*>verified_user</span>)?\s*(?:Verify &amp; Establish Session|Verify & Establish Session|Verify Identity|تحقق من الهوية).*?</button>',
@@ -296,6 +306,13 @@ def process_file(source_folder, dest_rel_path, screen_id, title_en, title_ar, i1
 
     # For My Attendance Mobile
     elif screen_id == 'my-attendance-mobile':
+        # Replace header brand with new logo
+        content = re.sub(
+            r'<div class="flex items-center gap-space-sm min-w-0">\s*<div[^>]*hub.*?</div>\s*<div class="flex flex-col min-w-0">.*?</div>\s*</div>',
+            '<a href="../index.html" class="flex items-center gap-2"><img src="../assets/images/wise-logo.png" alt="Wise Distribution" class="h-7 w-auto object-contain"/></a>',
+            content,
+            flags=re.DOTALL
+        )
         # Replace language button
         content = re.sub(
             r'<button[^>]*aria-label="Switch Language"[^>]*>.*?</button>',
