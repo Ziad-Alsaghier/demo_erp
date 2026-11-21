@@ -28,8 +28,10 @@
       }
     }
 
-    applyTranslations(lang);
-    updateLangButtons(lang);
+    requestAnimationFrame(() => {
+      applyTranslations(lang);
+      updateLangButtons(lang);
+    });
 
     window.dispatchEvent(new CustomEvent('wise:languageChanged', { detail: { lang, isRtl } }));
 

@@ -340,39 +340,25 @@
     // Password visibility toggle
     const togglePass = document.getElementById('togglePass');
     const secretKey = document.getElementById('secretKey');
-    togglePass.addEventListener('click', () => {
-      const isPass = secretKey.getAttribute('type') === 'password';
-      secretKey.setAttribute('type', isPass ? 'text' : 'password');
-      togglePass.innerHTML = `<span class="material-symbols-outlined text-[20px]">${isPass ? 'visibility_off' : 'visibility'}</span>`;
-    });
+    if (togglePass && secretKey) {
+      togglePass.addEventListener('click', () => {
+        const isPass = secretKey.getAttribute('type') === 'password';
+        secretKey.setAttribute('type', isPass ? 'text' : 'password');
+        togglePass.innerHTML = `<span class="material-symbols-outlined text-[20px]">${isPass ? 'visibility_off' : 'visibility'}</span>`;
+      });
+    }
 
     // Caps Lock indicator
     const capsNotice = document.getElementById('capsNotice');
-    secretKey.addEventListener('keyup', (e) => {
-      if (e.getModifierState('CapsLock')) {
-        capsNotice.classList.remove('hidden');
-      } else {
-        capsNotice.classList.add('hidden');
-      }
-    });
-
-    // Language switcher toggle state
-    const langEn = document.getElementById('lang-en');
-    const langAr = document.getElementById('lang-ar');
-    langEn.addEventListener('click', () => {
-      langEn.classList.add('bg-surface-container', 'text-on-surface', 'shadow-sm');
-      langEn.classList.remove('text-on-surface-variant');
-      langAr.classList.remove('bg-surface-container', 'text-on-surface', 'shadow-sm');
-      langAr.classList.add('text-on-surface-variant');
-      document.documentElement.setAttribute('dir', 'ltr');
-    });
-    langAr.addEventListener('click', () => {
-      langAr.classList.add('bg-surface-container', 'text-on-surface', 'shadow-sm');
-      langAr.classList.remove('text-on-surface-variant');
-      langEn.classList.remove('bg-surface-container', 'text-on-surface', 'shadow-sm');
-      langEn.classList.add('text-on-surface-variant');
-      document.documentElement.setAttribute('dir', 'rtl');
-    });
+    if (secretKey && capsNotice) {
+      secretKey.addEventListener('keyup', (e) => {
+        if (e.getModifierState && e.getModifierState('CapsLock')) {
+          capsNotice.classList.remove('hidden');
+        } else {
+          capsNotice.classList.add('hidden');
+        }
+      }, { passive: true });
+    }
 
     // Visual auth triggering
     function triggerAuth() {

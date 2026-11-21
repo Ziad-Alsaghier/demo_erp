@@ -19,6 +19,25 @@
   --color-on-surface-variant: #bfc7d3;
 }
 
+/* Hardware acceleration and rendering optimization for 60fps interaction & INP */
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+aside, header, #wise-command-palette, #wise-toast-container {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: auto;
+}
+
+/* Optimize heavy backdrop blurs so GPU compositing does not cause INP render latency */
+.backdrop-blur-xl, .backdrop-blur-2xl {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
 /* Base custom scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
